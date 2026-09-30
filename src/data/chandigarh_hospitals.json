@@ -1,0 +1,178 @@
+[
+  {
+    "id": "hosp-pgimer",
+    "name": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+    "type": "Tertiary / Premier Institute",
+    "sector": "Sector 12",
+    "coordinates": [
+      76.7765,
+      30.7645
+    ],
+    "beds": 2200,
+    "emergency": true,
+    "trauma_center": true,
+    "icu_beds": 180,
+    "daily_opd": 10500,
+    "source": "Chandigarh Health Dept / MoHFW Official Registry"
+  },
+  {
+    "id": "hosp-gmch-32",
+    "name": "Government Medical College and Hospital (GMCH 32)",
+    "type": "Government Medical College / Tertiary",
+    "sector": "Sector 32",
+    "coordinates": [
+      76.7725,
+      30.7085
+    ],
+    "beds": 950,
+    "emergency": true,
+    "trauma_center": true,
+    "icu_beds": 85,
+    "daily_opd": 4200,
+    "source": "GMCH Official Portal / Chandigarh Admin"
+  },
+  {
+    "id": "hosp-gmsh-16",
+    "name": "Government Multi-Specialty Hospital (GMSH 16)",
+    "type": "Multi-Specialty Civil Hospital",
+    "sector": "Sector 16",
+    "coordinates": [
+      76.782,
+      30.7485
+    ],
+    "beds": 500,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 40,
+    "daily_opd": 3500,
+    "source": "Directorate of Health Services, UT Chandigarh"
+  },
+  {
+    "id": "hosp-civil-22",
+    "name": "Civil Hospital Sector 22",
+    "type": "Sub-Divisional Civil Hospital",
+    "sector": "Sector 22",
+    "coordinates": [
+      76.768,
+      30.738
+    ],
+    "beds": 100,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 10,
+    "daily_opd": 1200,
+    "source": "National Health Mission Chandigarh"
+  },
+  {
+    "id": "hosp-civil-45",
+    "name": "Civil Hospital Sector 45",
+    "type": "Sub-Divisional Civil Hospital",
+    "sector": "Sector 45",
+    "coordinates": [
+      76.762,
+      30.706
+    ],
+    "beds": 120,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 12,
+    "daily_opd": 1400,
+    "source": "National Health Mission Chandigarh"
+  },
+  {
+    "id": "hosp-civil-manimajra",
+    "name": "Civil Hospital Manimajra",
+    "type": "Sub-Divisional Hospital",
+    "sector": "Manimajra",
+    "coordinates": [
+      76.841,
+      30.723
+    ],
+    "beds": 100,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 8,
+    "daily_opd": 1100,
+    "source": "Directorate of Health Services, UT Chandigarh"
+  },
+  {
+    "id": "hosp-ayush-24",
+    "name": "Government Ayurvedic Hospital Sector 24",
+    "type": "AYUSH Hospital",
+    "sector": "Sector 24",
+    "coordinates": [
+      76.761,
+      30.746
+    ],
+    "beds": 50,
+    "emergency": false,
+    "trauma_center": false,
+    "icu_beds": 0,
+    "daily_opd": 450,
+    "source": "AYUSH Dept Chandigarh"
+  },
+  {
+    "id": "hosp-apollo-clinic-8",
+    "name": "Apollo Clinic & Day Care",
+    "type": "Private Clinic / Secondary",
+    "sector": "Sector 8",
+    "coordinates": [
+      76.799,
+      30.741
+    ],
+    "beds": 35,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 4,
+    "daily_opd": 300,
+    "source": "Registry of Clinical Establishments"
+  },
+  {
+    "id": "hosp-max-mohali-border",
+    "name": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+    "type": "Private Tertiary Care",
+    "sector": "Sector 56",
+    "coordinates": [
+      76.721,
+      30.725
+    ],
+    "beds": 280,
+    "emergency": true,
+    "trauma_center": true,
+    "icu_beds": 45,
+    "daily_opd": 1800,
+    "source": "Registry of Clinical Establishments"
+  },
+  {
+    "id": "hosp-fortis-border",
+    "name": "Fortis Hospital Mohali (Border Sector 62)",
+    "type": "Private Tertiary Care",
+    "sector": "Sector 62",
+    "coordinates": [
+      76.732,
+      30.697
+    ],
+    "beds": 350,
+    "emergency": true,
+    "trauma_center": true,
+    "icu_beds": 60,
+    "daily_opd": 2100,
+    "source": "Registry of Clinical Establishments"
+  },
+  {
+    "id": "hosp-alchemist-panchkula-border",
+    "name": "Alchemist Hospital (Border Sector 21)",
+    "type": "Private Tertiary Care",
+    "sector": "Panchkula Border",
+    "coordinates": [
+      76.848,
+      30.702
+    ],
+    "beds": 150,
+    "emergency": true,
+    "trauma_center": false,
+    "icu_beds": 25,
+    "daily_opd": 900,
+    "source": "Registry of Clinical Establishments"
+  }
+]

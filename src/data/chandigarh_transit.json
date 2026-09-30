@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ISBT Sector 17 Terminal",
+    "type": "Interstate Bus Terminal",
+    "coordinates": [
+      76.778,
+      30.738
+    ],
+    "sector": "Sector 17"
+  },
+  {
+    "name": "ISBT Sector 43 Terminal",
+    "type": "Interstate Bus Terminal",
+    "coordinates": [
+      76.745,
+      30.718
+    ],
+    "sector": "Sector 43"
+  },
+  {
+    "name": "Chandigarh Railway Station",
+    "type": "Railway Junction",
+    "coordinates": [
+      76.822,
+      30.704
+    ],
+    "sector": "Industrial Area Phase 1"
+  },
+  {
+    "name": "Shaheed Bhagat Singh Int'l Airport (Link)",
+    "type": "Airport Access Hub",
+    "coordinates": [
+      76.79,
+      30.672
+    ],
+    "sector": "South Corridor"
+  }
+]

@@ -1,0 +1,3102 @@
+// Auto-generated Chandigarh sectors GeoJSON
+export const sectorsGeoJson = {
+  "type": "FeatureCollection",
+  "name": "chandigarh_sectors",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 1",
+        "center": [
+          76.802,
+          30.758
+        ],
+        "zone": "North",
+        "population": 3200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 5565.2,
+        "land_use": "Capitol Complex & Government",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.91,
+        "road_connectivity_score": 0.86,
+        "public_transit_score": 0.08
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7975,
+              30.761
+            ],
+            [
+              76.8065,
+              30.761
+            ],
+            [
+              76.8065,
+              30.755
+            ],
+            [
+              76.7975,
+              30.755
+            ],
+            [
+              76.7975,
+              30.761
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 2",
+        "center": [
+          76.79,
+          30.76
+        ],
+        "zone": "North",
+        "population": 5400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 9391.3,
+        "land_use": "Low Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 1.39,
+        "road_connectivity_score": 0.82,
+        "public_transit_score": 0.12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7855,
+              30.763
+            ],
+            [
+              76.7945,
+              30.763
+            ],
+            [
+              76.7945,
+              30.757
+            ],
+            [
+              76.7855,
+              30.757
+            ],
+            [
+              76.7855,
+              30.763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 3",
+        "center": [
+          76.78,
+          30.762
+        ],
+        "zone": "North",
+        "population": 6100,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 10608.7,
+        "land_use": "Low Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 0.44,
+        "road_connectivity_score": 0.77,
+        "public_transit_score": 0.1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7755,
+              30.765
+            ],
+            [
+              76.7845,
+              30.765
+            ],
+            [
+              76.7845,
+              30.759
+            ],
+            [
+              76.7755,
+              30.759
+            ],
+            [
+              76.7755,
+              30.765
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 4",
+        "center": [
+          76.77,
+          30.764
+        ],
+        "zone": "North",
+        "population": 5800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 10087.0,
+        "land_use": "Low Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 0.63,
+        "road_connectivity_score": 0.73,
+        "public_transit_score": 0.09
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7655,
+              30.767
+            ],
+            [
+              76.7745,
+              30.767
+            ],
+            [
+              76.7745,
+              30.761
+            ],
+            [
+              76.7655,
+              30.761
+            ],
+            [
+              76.7655,
+              30.767
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 5",
+        "center": [
+          76.76,
+          30.766
+        ],
+        "zone": "North",
+        "population": 4900,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 8521.7,
+        "land_use": "Low Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 1.59,
+        "road_connectivity_score": 0.68,
+        "public_transit_score": 0.14
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7555,
+              30.769
+            ],
+            [
+              76.7645,
+              30.769
+            ],
+            [
+              76.7645,
+              30.763
+            ],
+            [
+              76.7555,
+              30.763
+            ],
+            [
+              76.7555,
+              30.769
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 6",
+        "center": [
+          76.75,
+          30.768
+        ],
+        "zone": "North",
+        "population": 4200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 7304.3,
+        "land_use": "Low Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 2.57,
+        "road_connectivity_score": 0.64,
+        "public_transit_score": 0.11
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7455,
+              30.771
+            ],
+            [
+              76.7545,
+              30.771
+            ],
+            [
+              76.7545,
+              30.765
+            ],
+            [
+              76.7455,
+              30.765
+            ],
+            [
+              76.7455,
+              30.771
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 7",
+        "center": [
+          76.812,
+          30.748
+        ],
+        "zone": "North-East",
+        "population": 14200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 24695.7,
+        "land_use": "Residential & Commercial V4",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.47,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.15
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8075,
+              30.751
+            ],
+            [
+              76.8165,
+              30.751
+            ],
+            [
+              76.8165,
+              30.745
+            ],
+            [
+              76.8075,
+              30.745
+            ],
+            [
+              76.8075,
+              30.751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 8",
+        "center": [
+          76.8,
+          30.75
+        ],
+        "zone": "North",
+        "population": 16800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 29217.4,
+        "land_use": "Residential & Institutional",
+        "existing_hospitals": [
+          "Apollo Clinic & Day Care"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.0,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.18
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7955,
+              30.753
+            ],
+            [
+              76.8045,
+              30.753
+            ],
+            [
+              76.8045,
+              30.747
+            ],
+            [
+              76.7955,
+              30.747
+            ],
+            [
+              76.7955,
+              30.753
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 9",
+        "center": [
+          76.788,
+          30.752
+        ],
+        "zone": "North",
+        "population": 15500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 26956.5,
+        "land_use": "Residential & Administrative",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Multi-Specialty Hospital (GMSH 16)",
+        "distance_to_nearest_hospital_km": 0.69,
+        "road_connectivity_score": 0.99,
+        "public_transit_score": 0.14
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7835,
+              30.755
+            ],
+            [
+              76.7925,
+              30.755
+            ],
+            [
+              76.7925,
+              30.749
+            ],
+            [
+              76.7835,
+              30.749
+            ],
+            [
+              76.7835,
+              30.755
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 10",
+        "center": [
+          76.776,
+          30.754
+        ],
+        "zone": "North",
+        "population": 13800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 24000.0,
+        "land_use": "Residential & Museums",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Multi-Specialty Hospital (GMSH 16)",
+        "distance_to_nearest_hospital_km": 0.84,
+        "road_connectivity_score": 0.95,
+        "public_transit_score": 0.16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7715,
+              30.757
+            ],
+            [
+              76.7805,
+              30.757
+            ],
+            [
+              76.7805,
+              30.751
+            ],
+            [
+              76.7715,
+              30.751
+            ],
+            [
+              76.7715,
+              30.757
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 11",
+        "center": [
+          76.764,
+          30.756
+        ],
+        "zone": "North",
+        "population": 18200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 31652.2,
+        "land_use": "Residential & Educational",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 1.15,
+        "road_connectivity_score": 0.91,
+        "public_transit_score": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7595,
+              30.759
+            ],
+            [
+              76.7685,
+              30.759
+            ],
+            [
+              76.7685,
+              30.753
+            ],
+            [
+              76.7595,
+              30.753
+            ],
+            [
+              76.7595,
+              30.759
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 12",
+        "center": [
+          76.776,
+          30.764
+        ],
+        "zone": "North-West",
+        "population": 16500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 28695.7,
+        "land_use": "Medical & PGIMER Campus",
+        "existing_hospitals": [
+          "Postgraduate Institute of Medical Education and Research (PGIMER)"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 0.07,
+        "road_connectivity_score": 0.73,
+        "public_transit_score": 0.05
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7715,
+              30.767
+            ],
+            [
+              76.7805,
+              30.767
+            ],
+            [
+              76.7805,
+              30.761
+            ],
+            [
+              76.7715,
+              30.761
+            ],
+            [
+              76.7715,
+              30.767
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 14",
+        "center": [
+          76.768,
+          30.759
+        ],
+        "zone": "North-West",
+        "population": 19500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 33913.0,
+        "land_use": "Panjab University Campus",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 1.02,
+        "road_connectivity_score": 0.84,
+        "public_transit_score": 0.08
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7635,
+              30.762
+            ],
+            [
+              76.7725,
+              30.762
+            ],
+            [
+              76.7725,
+              30.756
+            ],
+            [
+              76.7635,
+              30.756
+            ],
+            [
+              76.7635,
+              30.762
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 15",
+        "center": [
+          76.766,
+          30.748
+        ],
+        "zone": "Central-West",
+        "population": 26400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 45913.0,
+        "land_use": "Dense Residential & Student",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 0.53,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7615,
+              30.751
+            ],
+            [
+              76.7705,
+              30.751
+            ],
+            [
+              76.7705,
+              30.745
+            ],
+            [
+              76.7615,
+              30.745
+            ],
+            [
+              76.7615,
+              30.751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 16",
+        "center": [
+          76.782,
+          30.748
+        ],
+        "zone": "Central",
+        "population": 14800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 25739.1,
+        "land_use": "Hospital (GMSH), Residential",
+        "existing_hospitals": [
+          "Government Multi-Specialty Hospital (GMSH 16)"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Government Multi-Specialty Hospital (GMSH 16)",
+        "distance_to_nearest_hospital_km": 0.06,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.15
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7775,
+              30.751
+            ],
+            [
+              76.7865,
+              30.751
+            ],
+            [
+              76.7865,
+              30.745
+            ],
+            [
+              76.7775,
+              30.745
+            ],
+            [
+              76.7775,
+              30.751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 17",
+        "center": [
+          76.778,
+          30.738
+        ],
+        "zone": "Central",
+        "population": 8500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 14782.6,
+        "land_use": "City Centre (Commercial/Civic)",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 22",
+        "distance_to_nearest_hospital_km": 0.96,
+        "road_connectivity_score": 0.99,
+        "public_transit_score": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7735,
+              30.741
+            ],
+            [
+              76.7825,
+              30.741
+            ],
+            [
+              76.7825,
+              30.735
+            ],
+            [
+              76.7735,
+              30.735
+            ],
+            [
+              76.7735,
+              30.741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 18",
+        "center": [
+          76.792,
+          30.738
+        ],
+        "zone": "Central",
+        "population": 18900,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 32869.6,
+        "land_use": "Residential & Mixed Commercial",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 0.75,
+        "road_connectivity_score": 0.99,
+        "public_transit_score": 0.21
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7875,
+              30.741
+            ],
+            [
+              76.7965,
+              30.741
+            ],
+            [
+              76.7965,
+              30.735
+            ],
+            [
+              76.7875,
+              30.735
+            ],
+            [
+              76.7875,
+              30.741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 19",
+        "center": [
+          76.804,
+          30.736
+        ],
+        "zone": "Central-East",
+        "population": 28200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 49043.5,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 0.73,
+        "road_connectivity_score": 0.95,
+        "public_transit_score": 0.24
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7995,
+              30.739
+            ],
+            [
+              76.8085,
+              30.739
+            ],
+            [
+              76.8085,
+              30.733
+            ],
+            [
+              76.7995,
+              30.733
+            ],
+            [
+              76.7995,
+              30.739
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 20",
+        "center": [
+          76.806,
+          30.726
+        ],
+        "zone": "Central-East",
+        "population": 34500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 60000.0,
+        "land_use": "Very High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.8,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8015,
+              30.729
+            ],
+            [
+              76.8105,
+              30.729
+            ],
+            [
+              76.8105,
+              30.723
+            ],
+            [
+              76.8015,
+              30.723
+            ],
+            [
+              76.8015,
+              30.729
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 21",
+        "center": [
+          76.794,
+          30.728
+        ],
+        "zone": "Central",
+        "population": 22100,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 38434.8,
+        "land_use": "Residential & Markets",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.52,
+        "road_connectivity_score": 0.97,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7895,
+              30.731
+            ],
+            [
+              76.7985,
+              30.731
+            ],
+            [
+              76.7985,
+              30.725
+            ],
+            [
+              76.7895,
+              30.725
+            ],
+            [
+              76.7895,
+              30.731
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 22",
+        "center": [
+          76.768,
+          30.738
+        ],
+        "zone": "Central-West",
+        "population": 38500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 66956.5,
+        "land_use": "Major Commercial & High Density",
+        "existing_hospitals": [
+          "Civil Hospital Sector 22"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Civil Hospital Sector 22",
+        "distance_to_nearest_hospital_km": 0.0,
+        "road_connectivity_score": 0.99,
+        "public_transit_score": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7635,
+              30.741
+            ],
+            [
+              76.7725,
+              30.741
+            ],
+            [
+              76.7725,
+              30.735
+            ],
+            [
+              76.7635,
+              30.735
+            ],
+            [
+              76.7635,
+              30.741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 23",
+        "center": [
+          76.762,
+          30.732
+        ],
+        "zone": "Central-West",
+        "population": 24600,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 42782.6,
+        "land_use": "Residential & Health Subcentre",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 22",
+        "distance_to_nearest_hospital_km": 0.88,
+        "road_connectivity_score": 0.88,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7575,
+              30.735
+            ],
+            [
+              76.7665,
+              30.735
+            ],
+            [
+              76.7665,
+              30.729
+            ],
+            [
+              76.7575,
+              30.729
+            ],
+            [
+              76.7575,
+              30.735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 24",
+        "center": [
+          76.758,
+          30.744
+        ],
+        "zone": "Central-West",
+        "population": 26800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 46608.7,
+        "land_use": "Residential & AYUSH Hospital",
+        "existing_hospitals": [
+          "Government Ayurvedic Hospital Sector 24"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 0.36,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7535,
+              30.747
+            ],
+            [
+              76.7625,
+              30.747
+            ],
+            [
+              76.7625,
+              30.741
+            ],
+            [
+              76.7535,
+              30.741
+            ],
+            [
+              76.7535,
+              30.747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 25",
+        "center": [
+          76.75,
+          30.749
+        ],
+        "zone": "West",
+        "population": 21500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 37391.3,
+        "land_use": "Institutional (PU South) & Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 1.11,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7455,
+              30.752
+            ],
+            [
+              76.7545,
+              30.752
+            ],
+            [
+              76.7545,
+              30.746
+            ],
+            [
+              76.7455,
+              30.746
+            ],
+            [
+              76.7455,
+              30.752
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 26",
+        "center": [
+          76.818,
+          30.738
+        ],
+        "zone": "East",
+        "population": 16200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 28173.9,
+        "land_use": "Grain Market & Technical Institutes",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 1.85,
+        "road_connectivity_score": 0.99,
+        "public_transit_score": 0.19
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8135,
+              30.741
+            ],
+            [
+              76.8225,
+              30.741
+            ],
+            [
+              76.8225,
+              30.735
+            ],
+            [
+              76.8135,
+              30.735
+            ],
+            [
+              76.8135,
+              30.741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 27",
+        "center": [
+          76.816,
+          30.726
+        ],
+        "zone": "East",
+        "population": 21400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 37217.4,
+        "land_use": "Residential & Markets",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 2.33,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8115,
+              30.729
+            ],
+            [
+              76.8205,
+              30.729
+            ],
+            [
+              76.8205,
+              30.723
+            ],
+            [
+              76.8115,
+              30.723
+            ],
+            [
+              76.8115,
+              30.729
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 28",
+        "center": [
+          76.822,
+          30.72
+        ],
+        "zone": "East",
+        "population": 19800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 34434.8,
+        "land_use": "Residential & Transport corridor",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Manimajra",
+        "distance_to_nearest_hospital_km": 1.85,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.21
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8175,
+              30.723
+            ],
+            [
+              76.8265,
+              30.723
+            ],
+            [
+              76.8265,
+              30.717
+            ],
+            [
+              76.8175,
+              30.717
+            ],
+            [
+              76.8175,
+              30.723
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 29",
+        "center": [
+          76.814,
+          30.712
+        ],
+        "zone": "South-East",
+        "population": 27500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 47826.1,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Manimajra",
+        "distance_to_nearest_hospital_km": 2.87,
+        "road_connectivity_score": 0.97,
+        "public_transit_score": 0.23
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8095,
+              30.715
+            ],
+            [
+              76.8185,
+              30.715
+            ],
+            [
+              76.8185,
+              30.709
+            ],
+            [
+              76.8095,
+              30.709
+            ],
+            [
+              76.8095,
+              30.715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 30",
+        "center": [
+          76.804,
+          30.718
+        ],
+        "zone": "South-Central",
+        "population": 25200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 43826.1,
+        "land_use": "Residential & Police Lines",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Apollo Clinic & Day Care",
+        "distance_to_nearest_hospital_km": 2.6,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7995,
+              30.721
+            ],
+            [
+              76.8085,
+              30.721
+            ],
+            [
+              76.8085,
+              30.715
+            ],
+            [
+              76.7995,
+              30.715
+            ],
+            [
+              76.7995,
+              30.721
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 31",
+        "center": [
+          76.8,
+          30.704
+        ],
+        "zone": "South-East",
+        "population": 18500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 32173.9,
+        "land_use": "Residential & Air Force / Industrial",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 2.69,
+        "road_connectivity_score": 0.79,
+        "public_transit_score": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7955,
+              30.707
+            ],
+            [
+              76.8045,
+              30.707
+            ],
+            [
+              76.8045,
+              30.701
+            ],
+            [
+              76.7955,
+              30.701
+            ],
+            [
+              76.7955,
+              30.707
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 32",
+        "center": [
+          76.786,
+          30.708
+        ],
+        "zone": "South-Central",
+        "population": 24000,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 41739.1,
+        "land_use": "Medical College (GMCH 32) & Residential",
+        "existing_hospitals": [
+          "Government Medical College and Hospital (GMCH 32)"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 1.3,
+        "road_connectivity_score": 0.88,
+        "public_transit_score": 0.18
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7815,
+              30.711
+            ],
+            [
+              76.7905,
+              30.711
+            ],
+            [
+              76.7905,
+              30.705
+            ],
+            [
+              76.7815,
+              30.705
+            ],
+            [
+              76.7815,
+              30.711
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 33",
+        "center": [
+          76.784,
+          30.716
+        ],
+        "zone": "South-Central",
+        "population": 17200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 29913.0,
+        "land_use": "Residential & Green Terraces",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 1.38,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7795,
+              30.719
+            ],
+            [
+              76.7885,
+              30.719
+            ],
+            [
+              76.7885,
+              30.713
+            ],
+            [
+              76.7795,
+              30.713
+            ],
+            [
+              76.7795,
+              30.719
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 34",
+        "center": [
+          76.772,
+          30.722
+        ],
+        "zone": "Central-South",
+        "population": 12500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 21739.1,
+        "land_use": "Sub-City Centre Commercial Hub",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 1.5,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.26
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7675,
+              30.725
+            ],
+            [
+              76.7765,
+              30.725
+            ],
+            [
+              76.7765,
+              30.719
+            ],
+            [
+              76.7675,
+              30.719
+            ],
+            [
+              76.7675,
+              30.725
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 35",
+        "center": [
+          76.762,
+          30.726
+        ],
+        "zone": "Central-South",
+        "population": 22800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 39652.2,
+        "land_use": "Commercial & High Density",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 22",
+        "distance_to_nearest_hospital_km": 1.45,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7575,
+              30.729
+            ],
+            [
+              76.7665,
+              30.729
+            ],
+            [
+              76.7665,
+              30.723
+            ],
+            [
+              76.7575,
+              30.723
+            ],
+            [
+              76.7575,
+              30.729
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 36",
+        "center": [
+          76.752,
+          30.73
+        ],
+        "zone": "South-West",
+        "population": 18400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 32000.0,
+        "land_use": "Residential & Fragrance Garden",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 22",
+        "distance_to_nearest_hospital_km": 1.77,
+        "road_connectivity_score": 0.93,
+        "public_transit_score": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7475,
+              30.733
+            ],
+            [
+              76.7565,
+              30.733
+            ],
+            [
+              76.7565,
+              30.727
+            ],
+            [
+              76.7475,
+              30.727
+            ],
+            [
+              76.7475,
+              30.733
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 37",
+        "center": [
+          76.742,
+          30.736
+        ],
+        "zone": "South-West",
+        "population": 31200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 54260.9,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 2.14,
+        "road_connectivity_score": 0.95,
+        "public_transit_score": 0.27
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7375,
+              30.739
+            ],
+            [
+              76.7465,
+              30.739
+            ],
+            [
+              76.7465,
+              30.733
+            ],
+            [
+              76.7375,
+              30.733
+            ],
+            [
+              76.7375,
+              30.739
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 38",
+        "center": [
+          76.736,
+          30.742
+        ],
+        "zone": "West",
+        "population": 33500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 58260.9,
+        "land_use": "High Density Residential & Commercial",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 2.37,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7315,
+              30.745
+            ],
+            [
+              76.7405,
+              30.745
+            ],
+            [
+              76.7405,
+              30.739
+            ],
+            [
+              76.7315,
+              30.739
+            ],
+            [
+              76.7315,
+              30.745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 38 West",
+        "center": [
+          76.726,
+          30.748
+        ],
+        "zone": "West",
+        "population": 24100,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 41913.0,
+        "land_use": "Developing High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 2.6,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.32
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7215,
+              30.751
+            ],
+            [
+              76.7305,
+              30.751
+            ],
+            [
+              76.7305,
+              30.745
+            ],
+            [
+              76.7215,
+              30.745
+            ],
+            [
+              76.7215,
+              30.751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 39",
+        "center": [
+          76.728,
+          30.74
+        ],
+        "zone": "South-West",
+        "population": 29800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 51826.1,
+        "land_use": "High Density & Water Works",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.8,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.26
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7235,
+              30.743
+            ],
+            [
+              76.7325,
+              30.743
+            ],
+            [
+              76.7325,
+              30.737
+            ],
+            [
+              76.7235,
+              30.737
+            ],
+            [
+              76.7235,
+              30.743
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 40",
+        "center": [
+          76.734,
+          30.732
+        ],
+        "zone": "South-West",
+        "population": 35600,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 61913.0,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.47,
+        "road_connectivity_score": 0.88,
+        "public_transit_score": 0.29
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7295,
+              30.735
+            ],
+            [
+              76.7385,
+              30.735
+            ],
+            [
+              76.7385,
+              30.729
+            ],
+            [
+              76.7295,
+              30.729
+            ],
+            [
+              76.7295,
+              30.735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 41",
+        "center": [
+          76.74,
+          30.724
+        ],
+        "zone": "South-West",
+        "population": 37200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 64695.7,
+        "land_use": "Very High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.83,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.31
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7355,
+              30.727
+            ],
+            [
+              76.7445,
+              30.727
+            ],
+            [
+              76.7445,
+              30.721
+            ],
+            [
+              76.7355,
+              30.721
+            ],
+            [
+              76.7355,
+              30.727
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 42",
+        "center": [
+          76.748,
+          30.718
+        ],
+        "zone": "South",
+        "population": 18900,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 32869.6,
+        "land_use": "Residential, Sports Complex & Lake",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 45",
+        "distance_to_nearest_hospital_km": 1.89,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7435,
+              30.721
+            ],
+            [
+              76.7525,
+              30.721
+            ],
+            [
+              76.7525,
+              30.715
+            ],
+            [
+              76.7435,
+              30.715
+            ],
+            [
+              76.7435,
+              30.721
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 43",
+        "center": [
+          76.756,
+          30.712
+        ],
+        "zone": "South",
+        "population": 16800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 29217.4,
+        "land_use": "ISBT 43 Bus Hub & Judicial Complex",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 45",
+        "distance_to_nearest_hospital_km": 0.88,
+        "road_connectivity_score": 0.97,
+        "public_transit_score": 0.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7515,
+              30.715
+            ],
+            [
+              76.7605,
+              30.715
+            ],
+            [
+              76.7605,
+              30.709
+            ],
+            [
+              76.7515,
+              30.709
+            ],
+            [
+              76.7515,
+              30.715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 44",
+        "center": [
+          76.764,
+          30.704
+        ],
+        "zone": "South",
+        "population": 32100,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 55826.1,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 45",
+        "distance_to_nearest_hospital_km": 0.29,
+        "road_connectivity_score": 0.79,
+        "public_transit_score": 0.27
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7595,
+              30.707
+            ],
+            [
+              76.7685,
+              30.707
+            ],
+            [
+              76.7685,
+              30.701
+            ],
+            [
+              76.7595,
+              30.701
+            ],
+            [
+              76.7595,
+              30.707
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 45",
+        "center": [
+          76.774,
+          30.702
+        ],
+        "zone": "South",
+        "population": 43500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 75652.2,
+        "land_use": "Civil Hospital 45 & Dense Residential",
+        "existing_hospitals": [
+          "Civil Hospital Sector 45"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 0.74,
+        "road_connectivity_score": 0.75,
+        "public_transit_score": 0.33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7695,
+              30.705
+            ],
+            [
+              76.7785,
+              30.705
+            ],
+            [
+              76.7785,
+              30.699
+            ],
+            [
+              76.7695,
+              30.699
+            ],
+            [
+              76.7695,
+              30.705
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 46",
+        "center": [
+          76.782,
+          30.696
+        ],
+        "zone": "South",
+        "population": 36200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 62956.5,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 1.66,
+        "road_connectivity_score": 0.62,
+        "public_transit_score": 0.29
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7775,
+              30.699
+            ],
+            [
+              76.7865,
+              30.699
+            ],
+            [
+              76.7865,
+              30.693
+            ],
+            [
+              76.7775,
+              30.693
+            ],
+            [
+              76.7775,
+              30.699
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 47",
+        "center": [
+          76.79,
+          30.69
+        ],
+        "zone": "South-East",
+        "population": 29400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 51130.4,
+        "land_use": "High Density Residential",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 2.65,
+        "road_connectivity_score": 0.48,
+        "public_transit_score": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7855,
+              30.693
+            ],
+            [
+              76.7945,
+              30.693
+            ],
+            [
+              76.7945,
+              30.687
+            ],
+            [
+              76.7855,
+              30.687
+            ],
+            [
+              76.7855,
+              30.693
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 48",
+        "center": [
+          76.762,
+          30.686
+        ],
+        "zone": "Far South",
+        "population": 26800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 46608.7,
+        "land_use": "Group Housing Societies",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Sector 45",
+        "distance_to_nearest_hospital_km": 2.22,
+        "road_connectivity_score": 0.4,
+        "public_transit_score": 0.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7575,
+              30.689
+            ],
+            [
+              76.7665,
+              30.689
+            ],
+            [
+              76.7665,
+              30.683
+            ],
+            [
+              76.7575,
+              30.683
+            ],
+            [
+              76.7575,
+              30.689
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 49",
+        "center": [
+          76.752,
+          30.688
+        ],
+        "zone": "Far South",
+        "population": 28900,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 50260.9,
+        "land_use": "Group Housing Societies",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Fortis Hospital Mohali (Border Sector 62)",
+        "distance_to_nearest_hospital_km": 2.16,
+        "road_connectivity_score": 0.44,
+        "public_transit_score": 0.29
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7475,
+              30.691
+            ],
+            [
+              76.7565,
+              30.691
+            ],
+            [
+              76.7565,
+              30.685
+            ],
+            [
+              76.7475,
+              30.685
+            ],
+            [
+              76.7475,
+              30.691
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 50",
+        "center": [
+          76.742,
+          30.692
+        ],
+        "zone": "Far South",
+        "population": 27500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 47826.1,
+        "land_use": "Group Housing & BPO Park",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Fortis Hospital Mohali (Border Sector 62)",
+        "distance_to_nearest_hospital_km": 1.11,
+        "road_connectivity_score": 0.53,
+        "public_transit_score": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7375,
+              30.695
+            ],
+            [
+              76.7465,
+              30.695
+            ],
+            [
+              76.7465,
+              30.689
+            ],
+            [
+              76.7375,
+              30.689
+            ],
+            [
+              76.7375,
+              30.695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 51",
+        "center": [
+          76.732,
+          30.698
+        ],
+        "zone": "Far South-West",
+        "population": 23400,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 40695.7,
+        "land_use": "Group Housing & Model Jail Link",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Fortis Hospital Mohali (Border Sector 62)",
+        "distance_to_nearest_hospital_km": 0.11,
+        "road_connectivity_score": 0.66,
+        "public_transit_score": 0.28
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7275,
+              30.701
+            ],
+            [
+              76.7365,
+              30.701
+            ],
+            [
+              76.7365,
+              30.695
+            ],
+            [
+              76.7275,
+              30.695
+            ],
+            [
+              76.7275,
+              30.701
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 52",
+        "center": [
+          76.726,
+          30.706
+        ],
+        "zone": "South-West",
+        "population": 36800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 64000.0,
+        "land_use": "Very High Density & Slum Rehabilitation",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Fortis Hospital Mohali (Border Sector 62)",
+        "distance_to_nearest_hospital_km": 1.15,
+        "road_connectivity_score": 0.84,
+        "public_transit_score": 0.34
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7215,
+              30.709
+            ],
+            [
+              76.7305,
+              30.709
+            ],
+            [
+              76.7305,
+              30.703
+            ],
+            [
+              76.7215,
+              30.703
+            ],
+            [
+              76.7215,
+              30.709
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 53",
+        "center": [
+          76.718,
+          30.712
+        ],
+        "zone": "South-West",
+        "population": 14200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 24695.7,
+        "land_use": "Mixed Residential & Open Spaces",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.47,
+        "road_connectivity_score": 0.97,
+        "public_transit_score": 0.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7135,
+              30.715
+            ],
+            [
+              76.7225,
+              30.715
+            ],
+            [
+              76.7225,
+              30.709
+            ],
+            [
+              76.7135,
+              30.709
+            ],
+            [
+              76.7135,
+              30.715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 54",
+        "center": [
+          76.712,
+          30.718
+        ],
+        "zone": "West Border",
+        "population": 19500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 33913.0,
+        "land_use": "Residential & Mohali Connectivity",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.16,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.32
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7075,
+              30.721
+            ],
+            [
+              76.7165,
+              30.721
+            ],
+            [
+              76.7165,
+              30.715
+            ],
+            [
+              76.7075,
+              30.715
+            ],
+            [
+              76.7075,
+              30.721
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 55",
+        "center": [
+          76.706,
+          30.724
+        ],
+        "zone": "West Border",
+        "population": 21200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 36869.6,
+        "land_use": "Palsora & High Density",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.44,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7015,
+              30.727
+            ],
+            [
+              76.7105,
+              30.727
+            ],
+            [
+              76.7105,
+              30.721
+            ],
+            [
+              76.7015,
+              30.721
+            ],
+            [
+              76.7015,
+              30.727
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 56",
+        "center": [
+          76.7,
+          30.73
+        ],
+        "zone": "West Border",
+        "population": 39500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 68695.7,
+        "land_use": "High Density Rehabilitation Sector",
+        "existing_hospitals": [
+          "Max Super Speciality Hospital (Border Sector 56/Phase 6)"
+        ],
+        "existing_hospitals_count": 1,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 2.09,
+        "road_connectivity_score": 0.93,
+        "public_transit_score": 0.36
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.6955,
+              30.733
+            ],
+            [
+              76.7045,
+              30.733
+            ],
+            [
+              76.7045,
+              30.727
+            ],
+            [
+              76.6955,
+              30.727
+            ],
+            [
+              76.6955,
+              30.733
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 61",
+        "center": [
+          76.708,
+          30.71
+        ],
+        "zone": "Far South-West",
+        "population": 18500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 32173.9,
+        "land_use": "Kajheri & Group Housing",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 2.08,
+        "road_connectivity_score": 0.93,
+        "public_transit_score": 0.31
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7035,
+              30.713
+            ],
+            [
+              76.7125,
+              30.713
+            ],
+            [
+              76.7125,
+              30.707
+            ],
+            [
+              76.7035,
+              30.707
+            ],
+            [
+              76.7035,
+              30.713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sector 63",
+        "center": [
+          76.742,
+          30.682
+        ],
+        "zone": "Far South Border",
+        "population": 24500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 42608.7,
+        "land_use": "CHB Modern Housing Complex",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Fortis Hospital Mohali (Border Sector 62)",
+        "distance_to_nearest_hospital_km": 1.92,
+        "road_connectivity_score": 0.4,
+        "public_transit_score": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7375,
+              30.685
+            ],
+            [
+              76.7465,
+              30.685
+            ],
+            [
+              76.7465,
+              30.679
+            ],
+            [
+              76.7375,
+              30.679
+            ],
+            [
+              76.7375,
+              30.685
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Industrial Area Phase 1",
+        "center": [
+          76.81,
+          30.71
+        ],
+        "zone": "East-Industrial",
+        "population": 14800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 25739.1,
+        "land_use": "Heavy Industrial & Commercial",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Manimajra",
+        "distance_to_nearest_hospital_km": 3.31,
+        "road_connectivity_score": 0.93,
+        "public_transit_score": 0.22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8055,
+              30.713
+            ],
+            [
+              76.8145,
+              30.713
+            ],
+            [
+              76.8145,
+              30.707
+            ],
+            [
+              76.8055,
+              30.707
+            ],
+            [
+              76.8055,
+              30.713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Industrial Area Phase 2",
+        "center": [
+          76.802,
+          30.698
+        ],
+        "zone": "South-East Industrial",
+        "population": 12600,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 21913.0,
+        "land_use": "Manufacturing & Warehousing",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Medical College and Hospital (GMCH 32)",
+        "distance_to_nearest_hospital_km": 3.06,
+        "road_connectivity_score": 0.66,
+        "public_transit_score": 0.21
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7975,
+              30.701
+            ],
+            [
+              76.8065,
+              30.701
+            ],
+            [
+              76.8065,
+              30.695
+            ],
+            [
+              76.7975,
+              30.695
+            ],
+            [
+              76.7975,
+              30.701
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Manimajra / NAC",
+        "center": [
+          76.842,
+          30.728
+        ],
+        "zone": "East Sub-City",
+        "population": 78500,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 136521.7,
+        "land_use": "Dense Urban Complex & Civil Hosp",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Civil Hospital Manimajra",
+        "distance_to_nearest_hospital_km": 0.56,
+        "road_connectivity_score": 0.97,
+        "public_transit_score": 0.38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8375,
+              30.731
+            ],
+            [
+              76.8465,
+              30.731
+            ],
+            [
+              76.8465,
+              30.725
+            ],
+            [
+              76.8375,
+              30.725
+            ],
+            [
+              76.8375,
+              30.731
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Dhanas / Milk Colony",
+        "center": [
+          76.742,
+          30.765
+        ],
+        "zone": "North-West Periphery",
+        "population": 41200,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 71652.2,
+        "land_use": "High Density Rehabilitation",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Government Ayurvedic Hospital Sector 24",
+        "distance_to_nearest_hospital_km": 2.79,
+        "road_connectivity_score": 0.71,
+        "public_transit_score": 0.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7375,
+              30.768
+            ],
+            [
+              76.7465,
+              30.768
+            ],
+            [
+              76.7465,
+              30.762
+            ],
+            [
+              76.7375,
+              30.762
+            ],
+            [
+              76.7375,
+              30.768
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Maloya",
+        "center": [
+          76.71,
+          30.725
+        ],
+        "zone": "West Periphery",
+        "population": 44800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 77913.0,
+        "land_use": "High Density EWS & Housing Complex",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
+        "distance_to_nearest_hospital_km": 1.06,
+        "road_connectivity_score": 1.0,
+        "public_transit_score": 0.37
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7055,
+              30.728
+            ],
+            [
+              76.7145,
+              30.728
+            ],
+            [
+              76.7145,
+              30.722
+            ],
+            [
+              76.7055,
+              30.722
+            ],
+            [
+              76.7055,
+              30.728
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_name": "Sarangpur (Inst. Zone)",
+        "center": [
+          76.752,
+          30.772
+        ],
+        "zone": "North-West Hub",
+        "population": 9800,
+        "area_sqkm": 0.575,
+        "density_per_sqkm": 17043.5,
+        "land_use": "Edu-City & Healthcare Expansion",
+        "existing_hospitals": [],
+        "existing_hospitals_count": 0,
+        "nearest_hospital": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "distance_to_nearest_hospital_km": 2.49,
+        "road_connectivity_score": 0.55,
+        "public_transit_score": 0.42
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.7475,
+              30.775
+            ],
+            [
+              76.7565,
+              30.775
+            ],
+            [
+              76.7565,
+              30.769
+            ],
+            [
+              76.7475,
+              30.769
+            ],
+            [
+              76.7475,
+              30.775
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+} as const;
+export default sectorsGeoJson;
