@@ -1,0 +1,78 @@
+{
+  "source": "Census of India 2011, Office of the Registrar General & Census Commissioner, India",
+  "url": "https://censusindia.gov.in/census.website/data/census-tables",
+  "retrieved_at": "2026-09-30T10:00:00Z",
+  "license": "Government Open Data License - India (GODL)",
+  "district": "Chandigarh (01)",
+  "state_code": "04",
+  "total_population_2011": 1055450,
+  "projected_population_2026": 1285000,
+  "sectors_sample": [
+    {
+      "sector": "Sector 1",
+      "pop_2011": 2840,
+      "area_acres": 240,
+      "households": 620
+    },
+    {
+      "sector": "Sector 12",
+      "pop_2011": 14200,
+      "area_acres": 280,
+      "households": 2900
+    },
+    {
+      "sector": "Sector 16",
+      "pop_2011": 12600,
+      "area_acres": 240,
+      "households": 2450
+    },
+    {
+      "sector": "Sector 20",
+      "pop_2011": 29800,
+      "area_acres": 240,
+      "households": 6100
+    },
+    {
+      "sector": "Sector 22",
+      "pop_2011": 32400,
+      "area_acres": 240,
+      "households": 6800
+    },
+    {
+      "sector": "Sector 32",
+      "pop_2011": 21000,
+      "area_acres": 240,
+      "households": 4300
+    },
+    {
+      "sector": "Sector 45",
+      "pop_2011": 38200,
+      "area_acres": 240,
+      "households": 7900
+    },
+    {
+      "sector": "Sector 52",
+      "pop_2011": 31500,
+      "area_acres": 220,
+      "households": 6500
+    },
+    {
+      "sector": "Manimajra",
+      "pop_2011": 68500,
+      "area_acres": 650,
+      "households": 14200
+    },
+    {
+      "sector": "Maloya",
+      "pop_2011": 36800,
+      "area_acres": 260,
+      "households": 7800
+    },
+    {
+      "sector": "Dhanas",
+      "pop_2011": 34200,
+      "area_acres": 240,
+      "households": 7100
+    }
+  ]
+}

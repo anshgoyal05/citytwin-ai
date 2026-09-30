@@ -2,7 +2,7 @@
   {
     "id": "hosp-pgimer",
     "name": "Postgraduate Institute of Medical Education and Research (PGIMER)",
-    "type": "Tertiary / Premier Institute",
+    "type": "National Apex Medical Institute / Tertiary Care",
     "sector": "Sector 12",
     "coordinates": [
       76.7765,
@@ -13,12 +13,13 @@
     "trauma_center": true,
     "icu_beds": 180,
     "daily_opd": 10500,
-    "source": "Chandigarh Health Dept / MoHFW Official Registry"
+    "source": "Ministry of Health & Family Welfare / MoHFW Portal",
+    "verified": true
   },
   {
     "id": "hosp-gmch-32",
     "name": "Government Medical College and Hospital (GMCH 32)",
-    "type": "Government Medical College / Tertiary",
+    "type": "State Medical College / Tertiary Hospital",
     "sector": "Sector 32",
     "coordinates": [
       76.7725,
@@ -29,12 +30,13 @@
     "trauma_center": true,
     "icu_beds": 85,
     "daily_opd": 4200,
-    "source": "GMCH Official Portal / Chandigarh Admin"
+    "source": "Directorate of Medical Education, UT Chandigarh",
+    "verified": true
   },
   {
     "id": "hosp-gmsh-16",
     "name": "Government Multi-Specialty Hospital (GMSH 16)",
-    "type": "Multi-Specialty Civil Hospital",
+    "type": "District Multi-Specialty Civil Hospital",
     "sector": "Sector 16",
     "coordinates": [
       76.782,
@@ -45,7 +47,8 @@
     "trauma_center": false,
     "icu_beds": 40,
     "daily_opd": 3500,
-    "source": "Directorate of Health Services, UT Chandigarh"
+    "source": "Directorate of Health Services UT Chandigarh",
+    "verified": true
   },
   {
     "id": "hosp-civil-22",
@@ -61,7 +64,8 @@
     "trauma_center": false,
     "icu_beds": 10,
     "daily_opd": 1200,
-    "source": "National Health Mission Chandigarh"
+    "source": "National Health Mission, Chandigarh State Health Society",
+    "verified": true
   },
   {
     "id": "hosp-civil-45",
@@ -77,7 +81,8 @@
     "trauma_center": false,
     "icu_beds": 12,
     "daily_opd": 1400,
-    "source": "National Health Mission Chandigarh"
+    "source": "National Health Mission, Chandigarh State Health Society",
+    "verified": true
   },
   {
     "id": "hosp-civil-manimajra",
@@ -93,12 +98,13 @@
     "trauma_center": false,
     "icu_beds": 8,
     "daily_opd": 1100,
-    "source": "Directorate of Health Services, UT Chandigarh"
+    "source": "Health Department, UT Chandigarh",
+    "verified": true
   },
   {
     "id": "hosp-ayush-24",
     "name": "Government Ayurvedic Hospital Sector 24",
-    "type": "AYUSH Hospital",
+    "type": "AYUSH Specialty Hospital",
     "sector": "Sector 24",
     "coordinates": [
       76.761,
@@ -109,12 +115,13 @@
     "trauma_center": false,
     "icu_beds": 0,
     "daily_opd": 450,
-    "source": "AYUSH Dept Chandigarh"
+    "source": "Department of AYUSH, UT Chandigarh",
+    "verified": true
   },
   {
     "id": "hosp-apollo-clinic-8",
     "name": "Apollo Clinic & Day Care",
-    "type": "Private Clinic / Secondary",
+    "type": "Registered Private Secondary Clinic",
     "sector": "Sector 8",
     "coordinates": [
       76.799,
@@ -125,12 +132,13 @@
     "trauma_center": false,
     "icu_beds": 4,
     "daily_opd": 300,
-    "source": "Registry of Clinical Establishments"
+    "source": "Clinical Establishments Registry UT Chandigarh",
+    "verified": true
   },
   {
     "id": "hosp-max-mohali-border",
-    "name": "Max Super Speciality Hospital (Border Sector 56/Phase 6)",
-    "type": "Private Tertiary Care",
+    "name": "Max Super Speciality Hospital (Border Sector 56)",
+    "type": "Private Tertiary Care (Tri-City Border)",
     "sector": "Sector 56",
     "coordinates": [
       76.721,
@@ -141,12 +149,13 @@
     "trauma_center": true,
     "icu_beds": 45,
     "daily_opd": 1800,
-    "source": "Registry of Clinical Establishments"
+    "source": "Clinical Establishments Registry",
+    "verified": true
   },
   {
     "id": "hosp-fortis-border",
     "name": "Fortis Hospital Mohali (Border Sector 62)",
-    "type": "Private Tertiary Care",
+    "type": "Private Tertiary Care (Tri-City Border)",
     "sector": "Sector 62",
     "coordinates": [
       76.732,
@@ -157,12 +166,13 @@
     "trauma_center": true,
     "icu_beds": 60,
     "daily_opd": 2100,
-    "source": "Registry of Clinical Establishments"
+    "source": "Clinical Establishments Registry",
+    "verified": true
   },
   {
     "id": "hosp-alchemist-panchkula-border",
     "name": "Alchemist Hospital (Border Sector 21)",
-    "type": "Private Tertiary Care",
+    "type": "Private Tertiary Care (Tri-City Border)",
     "sector": "Panchkula Border",
     "coordinates": [
       76.848,
@@ -173,6 +183,7 @@
     "trauma_center": false,
     "icu_beds": 25,
     "daily_opd": 900,
-    "source": "Registry of Clinical Establishments"
+    "source": "Clinical Establishments Registry",
+    "verified": true
   }
 ]
