@@ -26,3 +26,20 @@
   2. Machine learning layer (Random Forest Regressor / Gradient Boosting) trained with spatial sector grouping to prevent data leakage, benchmarked against baseline regressors.
 - **Rationale:** Black-box recommendations are unacceptable for multimillion-dollar municipal infrastructure decisions. Planners must see exactly why a site scores higher and simulate "what-if" weight adjustments.
 - **Status:** Accepted.
+
+## ADR-006: Spatial GroupKFold Cross-Validation by Planning Zone
+- **Decision:** Group observations strictly by administrative Planning Zone during 5-fold cross-validation rather than standard random k-fold splitting.
+- **Rationale:** Standard random cross-validation leaks spatial autocorrelation between adjacent sectors (Tobler's First Law of Geography), creating unrealistically optimistic evaluation scores. Zone-grouped validation proves that models generalize across unseen geographical sub-districts.
+- **Status:** Accepted.
+
+## ADR-007: Resilient Fallback Architecture (Local Store & Vector Renderer)
+- **Decision:** Implement zero-dependency fallback layers:
+  1. Frontend: High-fidelity interactive vector canvas fallback in `Chandigarh3DMap.tsx` when WebGL2 context is unavailable (e.g. headless CI/CD, older laptops).
+  2. Backend: In-memory/filesystem JSON data store fallback in `server/db.ts` when remote Supabase database credentials are not yet configured in `.env`.
+- **Rationale:** Ensures immediate out-of-the-box evaluation without requiring developers or evaluators to provision external cloud credentials before viewing the platform.
+- **Status:** Accepted.
+
+## ADR-008: Monte Carlo Benchmark & Invariant-Based Hard Validation
+- **Decision:** Enforce mandatory automated verification of $\ge 1,000$ Monte Carlo benchmark runs across the 5-simplex weight space and $\ge 200$ test cases per component ($\ge 800$ total) checking mathematical invariants (boundedness, monotonicity, scale invariance).
+- **Rationale:** Infrastructure planning models must mathematically guarantee that they cannot produce nonsensical outputs (e.g. negative scores, scores exceeding 100, or score decreases upon population increases).
+- **Status:** Accepted.

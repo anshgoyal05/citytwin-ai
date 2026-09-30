@@ -1,0 +1,68 @@
+{
+  "suite_name": "CityTwin AI Monte Carlo MCDA Benchmark",
+  "benchmark_timestamp": "2026-09-30T19:02:52.063350Z",
+  "total_runs": 1000,
+  "total_duration_seconds": 0.008,
+  "performance_telemetry": {
+    "avg_latency_ms": 0.0044,
+    "p95_latency_ms": 0.0067,
+    "p99_latency_ms": 0.0232,
+    "throughput_runs_per_sec": 117982.5
+  },
+  "candidate_stability_analysis": {
+    "cand-site-1": {
+      "name": "Site Alpha: Sector 52 / Maloya Growth Junction",
+      "wins_count": 729,
+      "win_rate_percent": 72.9,
+      "mean_score": 84.61,
+      "std_score": 5.87,
+      "min_score": 64.01,
+      "max_score": 93.65
+    },
+    "cand-site-2": {
+      "name": "Site Beta: Sarangpur Institutional Healthcare Parcel",
+      "wins_count": 271,
+      "win_rate_percent": 27.1,
+      "mean_score": 79.72,
+      "std_score": 4.04,
+      "min_score": 69.15,
+      "max_score": 90.13
+    },
+    "cand-site-4": {
+      "name": "Site Delta: Sector 48 / South Corridor Hub",
+      "wins_count": 0,
+      "win_rate_percent": 0.0,
+      "mean_score": 73.65,
+      "std_score": 6.37,
+      "min_score": 51.03,
+      "max_score": 87.22
+    },
+    "cand-site-3": {
+      "name": "Site Gamma: Sector 56 / Palsora Transit Boundary",
+      "wins_count": 0,
+      "win_rate_percent": 0.0,
+      "mean_score": 73.14,
+      "std_score": 7.53,
+      "min_score": 47.32,
+      "max_score": 87.2
+    },
+    "cand-site-5": {
+      "name": "Site Epsilon: Manimajra / Modern Housing East Hub",
+      "wins_count": 0,
+      "win_rate_percent": 0.0,
+      "mean_score": 68.59,
+      "std_score": 9.04,
+      "min_score": 39.95,
+      "max_score": 86.84
+    },
+    "cand-site-6": {
+      "name": "Site Zeta: Industrial Area Phase 2 Logistics Boundary",
+      "wins_count": 0,
+      "win_rate_percent": 0.0,
+      "mean_score": 63.69,
+      "std_score": 5.11,
+      "min_score": 50.77,
+      "max_score": 77.86
+    }
+  }
+}

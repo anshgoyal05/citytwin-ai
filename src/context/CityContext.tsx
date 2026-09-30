@@ -60,21 +60,21 @@ const CityContext = createContext<CityContextType | undefined>(undefined);
 
 export const CityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const selectedCity = 'Chandigarh, India';
-  const [sectors] = useState<SectorData[]>(sectorsDataRaw as SectorData[]);
-  const [hospitals] = useState<HospitalData[]>(hospitalsDataRaw as HospitalData[]);
-  const [transitHubs] = useState<TransitHub[]>(transitDataRaw as TransitHub[]);
+  const [sectors] = useState<SectorData[]>(sectorsDataRaw as unknown as SectorData[]);
+  const [hospitals] = useState<HospitalData[]>(hospitalsDataRaw as unknown as HospitalData[]);
+  const [transitHubs] = useState<TransitHub[]>(transitDataRaw as unknown as TransitHub[]);
   
   const [weights, setWeights] = useState<SuitabilityWeights>(DEFAULT_WEIGHTS);
   const [selectedSector, setSelectedSector] = useState<SectorData | null>(null);
   const [selectedCandidate, setSelectedCandidate] = useState<CandidateSite | null>(
-    (candidateSitesRaw as CandidateSite[])[0] || null
+    (candidateSitesRaw as unknown as CandidateSite[])[0] || null
   );
   
   const [comparisonSiteA, setComparisonSiteA] = useState<CandidateSite | null>(
-    (candidateSitesRaw as CandidateSite[])[0] || null
+    (candidateSitesRaw as unknown as CandidateSite[])[0] || null
   );
   const [comparisonSiteB, setComparisonSiteB] = useState<CandidateSite | null>(
-    (candidateSitesRaw as CandidateSite[])[1] || null
+    (candidateSitesRaw as unknown as CandidateSite[])[1] || null
   );
 
   const [activeFilterZone, setActiveFilterZone] = useState<string>('All');
@@ -100,7 +100,7 @@ export const CityProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Dynamically recalculate candidate site scores and ranks based on user-controlled weights
   const candidateSites = useMemo(() => {
-    const rawList = candidateSitesRaw as CandidateSite[];
+    const rawList = candidateSitesRaw as unknown as CandidateSite[];
     const totalWeight =
       weights.populationDemand +
       weights.healthcareGap +
