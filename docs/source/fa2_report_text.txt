@@ -1,0 +1,142 @@
+
+CityTwin AI:
+An AI-Powered Digital Twin Platform for Smarter Urban Planning and Decision-Making
+Project Proposal
+for the Course
+Course Code: 26CS023
+Applied AI and Prototype Development
+Submitted by:
+Akshat Jareat [2411981054]
+Aman [2411981063]
+Aniket Chauhan [2411981078]
+Ansh Goyal [2411981092]
+Under the Supervision of
+Dr. Ashutosh Dubey
+Professor
+School of Engineering and Technology
+Chitkara University, Himachal Pradesh
+24 September 2026
+
+CHITKARA UNIVERSITY, HIMACHAL PRADESH
+TABLE OF CONTENTS
+1.Introduction1
+1.1Background1
+1.2Existing Challenges1
+1.3Need for the Proposed Solution1
+1.4Brief Description of the Proposed Solution2
+2.Problem Statement2
+3.Objectives of the Proposed Work3
+4.Proposed Methodology and Implementation Plan3
+4.1Proposed Methodology4
+4.2Dataset/Data Collection4
+4.3Data Preparation5
+4.4Proposed System Components6
+4.5Flow Diagram7
+4.6Block Diagram8
+5.Expected Outcomes8
+REFERENCES9
+
+LIST OF FIGURES
+Figure No.
+Title of Figure
+Page No.
+Figure 4.1
+Flowchart of the Proposed CityTwin AI System
+7
+Figure 4.2
+Block Diagram of the Proposed CityTwin AI System
+8
+
+Introduction
+Background
+Cities are expanding fast. As more people move towards the urban areas, there is a need for more hospitals, schools, roads, public transport, housing, and other services. The planning of these facilities is getting more complex as city planners have tried to account for a number of factors. It includes population growth, traffic flow, land use, existing facilities, and the needs of the citizens[1].
+In the past, various urban planning decisions have been taken from different surveys, historical records, and manual analysis. These techniques may be helpful, but they do not necessarily show the full extent of connectivity between various components of a city. A new hospital building, for instance, can be built in a high-density population area, but when the roads are full or public transportation is not readily available, it can be hard for people to get to the hospitals [2].
+Existing Challenges
+The creation of an infrastructure for a city has many challenges. The most frequent problem is that the information that's needed is not always stored in the same location, or in the same format. The population data, road data, hospital data, school data, and transportation data can be from different sources. It can be challenging to compile this information [2].
+One of the difficulties is that the decisions of where to place infrastructure require multiple factors to be considered concurrently. For instance, choosing a site for a hospital can't be based solely on a population size. Other geographical factors, such as existing hospitals, road accessibility and distance, also must be taken into consideration [7].
+Other challenges in urban digital twins include data quality, interoperability, computing power and integration of various data sources [1].
+The proposed work is necessary to address the identified need.
+Need for the Proposed Solution
+There is a need for a system to be able to integrate city data and make it easier to analyse potential infrastructure decisions.
+Planners should have the ability to analyse multiple datasets together and be able to see key city data at their fingertips to identify infrastructure needs and compare potential infrastructure locations before implementation.
+This can help to minimize manual analysis and facilitate better information-based and transparent decision-making.
+The goal of the proposed work is to give such assistance without taking the final decision from the urban planner.
+Brief Description of the Proposed Solution
+CityTwin AI is a suggested digital twin platform for urban infrastructure planning, leveraging AI capabilities. The first prototype will be focused on the city of Chandigarh and the main use case will be hospital location planning.
+Primary official government and public-authority data will be used in the system. The data will be cleansed, merged and displayed on an interactive map of the city that includes information like population, hospitals already in place, geographical location, road connectivity, and access.
+Possible locations will be judged and ranked using the GIS-based analysis and weighted suitability approach. Where appropriate, sufficient suitable data exists, AI/ML techniques can also be used for pattern analysis and demand prediction.
+The uniqueness of CityTwin AI is the combination of Digital Twin, GIS based analysis, AI based recommendation and scenario comparison in one platform. The system will not replace planners, but rather aid in their comparison of possible infrastructure decisions in a virtual environment prior to their implementation in the real world.
+Problem Statement
+Complex urban planning and urban infrastructure management is one of the key challenges in urban growing. Departments and systems run important systems such as public transport, hospitals, schools, roads and utilities. The data is fragmented, so city planners and authorities are unable to get one complete, up-to-date picture of the city. This can lead to slower, less effective planning and decision making, as decisions may be based on insufficient or outdated information.
+It’s an urban planning issue, an issue for the government, infrastructure builders and the citizens who depend on the city’s infrastructure. The high risk of poor coordination and lack of adequate data can lead to traffic congestion, inefficient use of resources, inadequate infrastructure development and slow response.
+Urban planning is currently often based on static maps, spreadsheets and separate databases and GIS systems. Useful, but they may not give you an interactive view of the whole city, or let you analyze different types of data together in real time. It can be difficult, therefore, to predict the effects of a new infrastructure project or other change on the city before it is actually implemented. To address this problem, it requires a smarter solution to integrate various types of urban data on a single platform. CityTwin AI aims to offer an AI-based digital twin to visualize, analyze and simulate different urban situations
+Objectives of the Proposed Work
+To design and develop a digital twin-based platform that combines city data such as population, healthcare facilities, roads, and public infrastructure for better urban planning.
+To analyse and predict infrastructure requirements using AI/ML techniques and recommend suitable locations for facilities such as hospitals based on population demand, accessibility, and existing infrastructure.
+To implement and evaluate an interactive dashboard that allows planners to visualize recommendations, compare different planning scenarios, and understand the possible impact before real-world implementation.
+Proposed Methodology and Implementation Plan
+The proposed CityTwin AI system will be developed as a data-driven platform to support urban infrastructure planning. The system will combine different types of city data, analyse existing infrastructure, and identify areas where new facilities may be required. The first prototype will focus on Chandigarh, with hospital location planning as the main use case.
+Urban digital twins can bring different types of city information into a common digital environment and support urban planning and decision-making [1,2]. CityTwin AI follows the same basic idea but focuses on creating a simple and practical decision-support system for infrastructure planning.
+Proposed Methodology
+CityTwin AI will follow a step-by-step methodology starting with data collection and ending with recommendations displayed through an interactive dashboard.
+First, relevant city data will be collected from primary and official datasets. This will include population, healthcare facilities, roads, public transport, administrative areas, and other available infrastructure information. The collected datasets will then be cleaned and organized into a common format.
+After preprocessing, the datasets will be connected using geographical information such as sector, area, latitude, and longitude. This information will be used to create a digital representation of the city where existing infrastructure and different geographical areas can be viewed together.
+For hospital planning, different areas will be analyzed using factors such as population density, distance from existing hospitals, road connectivity, accessibility, and availability of existing healthcare services. Similar factors have been used in GIS-based hospital site-selection studies, where population density, proximity to roads, distance from existing hospitals, and other geographical factors are considered while identifying suitable locations [3].
+Initially, CityTwin AI will use a weighted suitability scoring approach. Each selected factor will be given an appropriate importance or weight, and candidate locations will receive an overall suitability score. GIS-based weighted approaches are useful because healthcare site selection depends on several spatial and non-spatial factors rather than a single variable [3,4].
+The system will then rank suitable areas and display the results through maps and simple explanations. Different possible locations can also be compared before a final planning decision is made.
+Dataset/Data Collection
+CityTwin AI requires different types of city data because infrastructure planning cannot depend on a single dataset. For this project, primary datasets from official government and public-authority sources will be used instead of relying on third-party datasets.
+The data will mainly be collected from sources such as the Census of India, Open Government Data Platform India, Chandigarh Administration, and other relevant official government portals.
+The required data will include:
+Population and demographic information
+Existing hospitals and healthcare facilities
+Schools and other public infrastructure
+Road and connectivity information
+Public transport information
+Traffic information, where officially available
+City sectors and administrative boundaries
+Land-use information, where available
+The exact number of records will depend on the availability of official data during development. Wherever possible, information will be organized according to Chandigarh sectors or geographical areas.
+Important features may include area name, population, latitude, longitude, number of nearby hospitals, distance from existing healthcare facilities, road connectivity, and transport accessibility.
+Combining spatial and non-spatial information is particularly useful for healthcare accessibility and site suitability analysis [4].
+Data Preparation
+Since the data will come from different primary sources, it may be available in different formats. Therefore, preprocessing will be required before the data can be analysed.
+First, duplicate and incorrect records will be identified and removed. Area and sector names will be standardized so that the same location is represented consistently across different datasets. Missing values will also be checked. Records containing critical missing geographical information may be excluded when they cannot be reliably corrected.
+The datasets will then be connected using common attributes such as sector name, area, latitude, and longitude.
+Additional features may be calculated from the available information. These can include population density, distance from the nearest hospital, number of healthcare facilities in an area, road accessibility, and transport availability.
+Numerical features will be normalized where required so that variables with larger numerical values do not unnecessarily dominate the suitability calculation.
+This prepared dataset will then be provided to the analysis and recommendation modules.
+Proposed System Components
+CityTwin AI will contain multiple modules that work together.
+The Data Module will handle the collection, cleaning, organization, and storage of primary city data.
+The Digital Map Module will display city sectors, hospitals, roads, and other available infrastructure geographically. Digital twin approaches can combine different urban inputs and processing methods to provide useful information for planning and urban management [2].
+The Analysis Module will examine factors such as population, existing infrastructure, accessibility, and connectivity.
+The Recommendation Module will calculate suitability scores and rank possible locations. For example, an area with a relatively high population but poor access to existing hospitals may receive higher consideration for a new healthcare facility.
+The Scenario Comparison Module will allow the system to compare different possible locations. This will help users understand how one planning option differs from another rather than providing only one final recommendation.
+Finally, the Dashboard Module will present city information and recommendations using interactive maps, scores, basic statistics, and simple explanations.
+Flow Diagram
+The complete working process of CityTwin AI will be represented using one flowchart, shown in Figure 4.1. It will show how the system moves from raw city data to the final infrastructure recommendations.
+
+Figure 4.1: Flowchart of the Proposed CityTwin AI System
+Block Diagram
+The proposed architecture will connect the user interface, backend, primary city datasets, analysis module, recommendation engine, and visualization module. The overall architecture is shown in Figure 4.2.
+
+Figure 4.2: Block Diagram of the Proposed CityTwin AI System
+Expected Outcomes
+The proposed CityTwin AI system is expected to:
+Develop a digital representation of city infrastructure by combining population, healthcare, road, and other relevant urban data.
+Generate data-driven recommendations for suitable locations of infrastructure such as hospitals by considering factors like population demand, accessibility, and existing facilities.
+Provide an interactive dashboard where planners can visualize city data, view recommended locations, and compare different planning scenarios before implementation.
+The system is expected to support more informed, transparent, and data-driven urban planning decisions while reducing the effort required to analyse multiple data sources manually.
+REFERENCES
+[1] Schrotter G, Hürzeler C. The digital twin of the City of Zurich for urban planning. PFG J Photogramm Remote Sens Geoinf Sci. 2020;88:99-112. doi:10.1007/s41064-020-00092-2.
+[2] Ferré-Bigorra J, Casals M, Gangolells M. The adoption of urban digital twins. Cities. 2022;131:103905. doi:10.1016/j.cities.2022.103905. 
+[3] Tripathi AK, Agrawal S, Gupta RD. Comparison of GIS-based AHP and fuzzy AHP methods for hospital site selection: a case study for Prayagraj City, India. GeoJournal. 2022;87(5):3507-3528. doi:10.1007/s10708-021-10445-y. 
+[4] Parvin F, Ali SA, Hashmi SNI, Khatoon A. Accessibility and site suitability for healthcare services using GIS-based hybrid decision-making approach: a study in Murshidabad, India. Spat Inf Res. 2021;29(1):1-18. doi:10.1007/s41324-020-00330-0. 
+[5] Lei B, Janssen P, Stoter J, Biljecki F. Challenges of urban digital twins: a systematic review and a Delphi expert survey. Autom Constr. 2023;147:104716. doi:10.1016/j.autcon.2022.104716. 
+[6] Bibri SE, Huang J, Jagatheesaperumal SK, Krogstie J. The synergistic interplay of artificial intelligence and digital twin in environmentally planning sustainable smart cities: a comprehensive systematic review. Environ Sci Ecotechnol. 2024;20:100433. doi:10.1016/j.ese.2024.100433. 
+[7] Ranatunga S, Ødegård RS, Onstein E, Jetlund K. Digital twins for geospatial decision-making. ISPRS Ann Photogramm Remote Sens Spatial Inf Sci. 2024;X-4-2024:271-278. doi:10.5194/isprs-annals-X-4-2024-271-2024. 
+[8] Mazzetto S. A review of urban digital twins integration, challenges, and future directions in smart city development. Sustainability. 2024;16(19):8337. doi:10.3390/su16198337. 
+[9] Handore K, Kokane P. Exploring the methodologies for developing city digital twin for sustainable smart cities: a thematic analysis. ISPRS Ann Photogramm Remote Sens Spatial Inf Sci. 2025;X-5/W2-2025:235-247. doi:10.5194/isprs-annals-X-5-W2-2025-235-2025. 
+[10] Batty M. Digital twins in city planning. Nat Comput Sci. 2024;4(3):192-199. doi:10.1038/s43588-024-00606-7. 
+[11] Villanueva-Merino A, Urra-Uriarte S, Izkara JL, Campos-Cordobes S, Aranguren A, Molina-Costa P. Leveraging local digital twins for planning age-friendly urban environments. Cities. 2024;155:105458. doi:10.1016/j.cities.2024.105458. 
