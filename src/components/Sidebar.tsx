@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
-  Globe,
-  LayoutDashboard,
+  Sparkles,
+  Layers,
   Bot,
   GitCompare,
   Cpu,
   BarChart3,
   FileText,
-  Activity,
-  Layers,
+  ChevronLeft,
+  ChevronRight,
+  ShieldCheck,
 } from 'lucide-react';
 
 export const Sidebar: React.FC = () => {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+
   const menuItems = [
-    { path: '/', label: 'Overview', icon: Globe },
-    { path: '/dashboard', label: '3D Spatial Twin', icon: LayoutDashboard },
+    { path: '/', label: 'Overview', icon: Sparkles },
+    { path: '/dashboard', label: '3D Spatial Twin', icon: Layers },
     { path: '/simulation', label: 'Scenario Comparison', icon: GitCompare },
     { path: '/analytics', label: 'Demographics & Health', icon: BarChart3 },
     { path: '/reports', label: 'Executive Reports', icon: FileText },
@@ -24,47 +27,75 @@ export const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="w-16 hover:w-56 transition-all duration-300 bg-white/85 backdrop-blur-2xl border-r border-black/10 flex flex-col justify-between p-3 z-40 group shadow-apple-sm text-slate-800">
+    <aside
+      className={`h-full transition-all duration-300 glass-nav border-r border-apple-border-light dark:border-apple-border-dark flex flex-col justify-between p-3 z-30 shadow-apple-subtle shrink-0 ${
+        isCollapsed ? 'w-16' : 'w-60'
+      }`}
+    >
       <div className="space-y-4">
-        <div className="flex items-center gap-3 px-2 py-1 text-blue-600">
-          <Layers className="w-5 h-5 flex-shrink-0 animate-pulse" />
-          <span className="font-sans text-xs font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-slate-900">
-            CHANDIGARH TWIN
-          </span>
+        {/* Header with Minimize Toggle (< or >) */}
+        <div className="flex items-center justify-between px-1 py-1">
+          <div className="flex items-center gap-2.5 text-apple-accent truncate">
+            <Layers className="w-5 h-5 flex-shrink-0 animate-pulse" />
+            {!isCollapsed && (
+              <span className="font-sans text-xs font-bold tracking-wider text-apple-text-primary-light dark:text-apple-text-primary-dark truncate">
+                CHANDIGARH TWIN
+              </span>
+            )}
+          </div>
+
+          <button
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            className="p-1.5 rounded-apple-sm text-apple-text-secondary-light hover:text-apple-text-primary-light hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            title={isCollapsed ? 'Expand Navigation (>)' : 'Minimize Navigation (<)'}
+          >
+            {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+          </button>
         </div>
 
-        <nav className="space-y-1.5">
+        {/* Navigation Items */}
+        <nav className="space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
               <NavLink
                 key={item.path}
                 to={item.path}
+                title={isCollapsed ? item.label : undefined}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-3 py-2.5 rounded-2xl text-xs font-medium transition-all ${
+                  `flex items-center gap-3 px-3 py-2.5 rounded-apple-md text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-blue-600 text-white shadow-apple-sm font-semibold'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-black/5'
+                      ? 'bg-apple-accent text-white shadow-apple-subtle font-semibold'
+                      : 'text-apple-text-secondary-light dark:text-apple-text-secondary-dark hover:text-apple-text-primary-light dark:hover:text-apple-text-primary-dark hover:bg-black/5 dark:hover:bg-white/5'
                   }`
                 }
               >
                 <Icon className="w-4 h-4 flex-shrink-0" />
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  {item.label}
-                </span>
+                {!isCollapsed && (
+                  <span className="truncate whitespace-nowrap">{item.label}</span>
+                )}
               </NavLink>
             );
           })}
         </nav>
       </div>
 
-      <div className="p-2.5 bg-black/5 rounded-2xl border border-black/10 text-[11px] text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans">
-        <div className="font-bold text-emerald-600 flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>GIS PostGIS Ready</span>
+      {/* Footer Info Badge */}
+      {!isCollapsed ? (
+        <div className="p-3 bg-black/[0.03] dark:bg-white/[0.03] rounded-apple-md border border-apple-border-light dark:border-apple-border-dark text-[11px] font-sans space-y-1">
+          <div className="font-semibold text-emerald-500 flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>GIS Engine Active</span>
+          </div>
+          <div className="text-[10px] text-apple-text-tertiary">
+            UT Admin Primary Data (64 Sectors)
+          </div>
         </div>
-        <div className="text-[10px] text-slate-500 mt-0.5">UT Admin Data Active</div>
-      </div>
+      ) : (
+        <div className="flex justify-center p-2" title="GIS PostGIS Active">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+        </div>
+      )}
     </aside>
   );
 };

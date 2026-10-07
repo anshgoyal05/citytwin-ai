@@ -55,25 +55,25 @@ export const Agents: React.FC = () => {
   ]);
 
   return (
-    <div className="min-h-[calc(100vh-3.5rem)] p-4 md:p-8 space-y-8 max-w-7xl mx-auto font-sans text-slate-900">
+    <div className="min-h-[calc(100vh-3.5rem)] p-4 md:p-8 space-y-8 max-w-7xl mx-auto font-sans text-apple-text-primary-light dark:text-apple-text-primary-dark transition-colors duration-300">
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-700 text-xs font-bold mb-1">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-apple-accent/10 border border-apple-accent/20 text-apple-accent text-xs font-bold mb-1">
             <Cpu className="w-3.5 h-3.5" />
             <span>AUTONOMOUS PIPELINE ORCHESTRATION</span>
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-3xl font-bold tracking-tight text-apple-text-primary-light dark:text-apple-text-primary-dark">
             Data & Spatial ML Agents
           </h1>
-          <p className="text-sm text-slate-600 mt-1">
+          <p className="text-sm text-apple-text-secondary-light dark:text-apple-text-secondary-dark mt-1">
             Real-time status of data ingestion, spatial indexing, suitability scoring, and ML validation.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full text-emerald-800 text-xs font-bold">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span>4 Active Modular Agents</span>
+        <div className="flex items-center gap-2 glass-panel px-3.5 py-1.5 rounded-full border border-apple-border-light dark:border-apple-border-dark text-apple-text-secondary-light dark:text-apple-text-secondary-dark text-xs font-medium">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span>4 Modular Micro-Agents Active</span>
         </div>
       </div>
 
@@ -82,58 +82,58 @@ export const Agents: React.FC = () => {
         {agents.map((agent) => (
           <div
             key={agent.id}
-            className="glass-card p-6 rounded-3xl bg-white/90 border border-black/10 shadow-apple-sm space-y-4 hover:border-blue-500/30 transition-all"
+            className="glass-card p-6 rounded-apple-2xl border border-apple-border-light dark:border-apple-border-dark shadow-apple-card space-y-4 hover:border-apple-accent/40 transition-all hover:-translate-y-0.5"
           >
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-3xl p-2 rounded-2xl bg-black/5">{agent.avatar}</span>
+                <span className="text-3xl p-2.5 rounded-apple-xl bg-black/[0.03] dark:bg-white/[0.05] border border-apple-border-light dark:border-apple-border-dark">{agent.avatar}</span>
                 <div>
-                  <h3 className="font-extrabold text-base text-slate-900">{agent.name}</h3>
-                  <div className="text-xs text-slate-500 font-medium">{agent.role}</div>
+                  <h3 className="font-bold text-base text-apple-text-primary-light dark:text-apple-text-primary-dark">{agent.name}</h3>
+                  <div className="text-xs text-apple-text-secondary-light dark:text-apple-text-secondary-dark font-medium">{agent.role}</div>
                 </div>
               </div>
-              <span className="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-blue-50 text-blue-700 border border-blue-200">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-apple-accent/10 text-apple-accent border border-apple-accent/20">
                 {agent.status}
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 p-3 rounded-2xl bg-black/5 text-xs">
+            <div className="grid grid-cols-2 gap-2 p-3 rounded-apple-xl bg-black/[0.02] dark:bg-white/[0.03] border border-apple-border-light dark:border-apple-border-dark text-xs">
               <div>
-                <span className="text-slate-500">Pipeline Confidence:</span>
-                <div className="font-black text-slate-900 text-sm">{agent.confidence}%</div>
+                <span className="text-apple-text-tertiary text-[11px]">Pipeline Confidence:</span>
+                <div className="font-bold text-apple-text-primary-light dark:text-apple-text-primary-dark text-sm font-mono">{agent.confidence}%</div>
               </div>
               <div>
-                <span className="text-slate-500">Active Records:</span>
-                <div className="font-black text-slate-900 text-sm">{agent.activeTasks}</div>
+                <span className="text-apple-text-tertiary text-[11px]">Active Records:</span>
+                <div className="font-bold text-apple-text-primary-light dark:text-apple-text-primary-dark text-sm font-mono">{agent.activeTasks}</div>
               </div>
             </div>
 
-            <div className="text-xs text-slate-600">
-              <strong className="text-slate-700">Latest Action:</strong> {agent.lastAction}
+            <div className="text-xs text-apple-text-secondary-light dark:text-apple-text-secondary-dark">
+              <strong className="text-apple-text-primary-light dark:text-apple-text-primary-dark">Latest Action:</strong> {agent.lastAction}
             </div>
           </div>
         ))}
       </div>
 
       {/* Pipeline Activity Log */}
-      <div className="glass-card p-6 rounded-3xl bg-white/90 border border-black/10 shadow-apple-sm space-y-4">
+      <div className="glass-card p-6 rounded-apple-2xl border border-apple-border-light dark:border-apple-border-dark shadow-apple-card space-y-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 font-extrabold text-base text-slate-900">
-            <Terminal className="w-4 h-4 text-blue-600" />
+          <div className="flex items-center gap-2 font-semibold text-base text-apple-text-primary-light dark:text-apple-text-primary-dark">
+            <Terminal className="w-4 h-4 text-apple-accent" />
             <span>Spatial Data Pipeline Activity Log</span>
           </div>
-          <span className="text-xs text-slate-500">System Nominal</span>
+          <span className="text-xs text-apple-text-tertiary font-mono">System Nominal</span>
         </div>
 
         <div className="space-y-2 font-mono text-xs max-h-64 overflow-y-auto">
           {logs.map((log) => (
             <div
               key={log.id}
-              className="flex items-start gap-3 p-2.5 rounded-xl bg-black/5 text-slate-800"
+              className="flex items-start gap-3 p-2.5 rounded-apple-md bg-black/[0.02] dark:bg-white/[0.03] border border-apple-border-light dark:border-apple-border-dark text-apple-text-primary-light dark:text-apple-text-primary-dark"
             >
-              <span className="text-slate-400 shrink-0">[{log.timestamp}]</span>
-              <span className="font-semibold text-blue-600 shrink-0">{log.agentName}:</span>
-              <span className="text-slate-700">{log.message}</span>
+              <span className="text-apple-text-tertiary shrink-0">[{log.timestamp}]</span>
+              <span className="font-semibold text-apple-accent shrink-0">{log.agentName}:</span>
+              <span className="text-apple-text-secondary-light dark:text-apple-text-secondary-dark">{log.message}</span>
             </div>
           ))}
         </div>

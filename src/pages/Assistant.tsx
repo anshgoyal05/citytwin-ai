@@ -111,19 +111,19 @@ export const Assistant: React.FC = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-3.5rem)] flex flex-col max-w-4xl mx-auto p-4 md:p-6 font-sans text-slate-900">
+    <div className="h-[calc(100vh-3.5rem)] flex flex-col max-w-4xl mx-auto p-4 md:p-6 font-sans text-apple-text-primary-light dark:text-apple-text-primary-dark transition-colors duration-300">
       {/* Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-black/10">
+      <div className="flex items-center justify-between pb-4 border-b border-apple-border-light dark:border-apple-border-dark">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-700 text-xs font-bold mb-1">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-apple-accent/10 border border-apple-accent/20 text-apple-accent text-xs font-bold mb-1">
             <Sparkles className="w-3.5 h-3.5" />
             <span>CHANDIGARH SPATIAL COPILOT</span>
           </div>
-          <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-2xl font-bold tracking-tight text-apple-text-primary-light dark:text-apple-text-primary-dark">
             Urban Planning Assistant
           </h1>
         </div>
-        <div className="text-xs text-slate-500 bg-black/5 px-3 py-1.5 rounded-full font-semibold">
+        <div className="text-xs text-apple-text-secondary-light dark:text-apple-text-secondary-dark glass-panel px-3.5 py-1.5 rounded-full border border-apple-border-light dark:border-apple-border-dark font-medium">
           64 Sectors • 11 Hospitals Live
         </div>
       </div>
@@ -136,33 +136,33 @@ export const Assistant: React.FC = () => {
             className={`flex items-start gap-3 ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             {m.sender === 'ai' && (
-              <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-apple-sm">
+              <div className="w-8 h-8 rounded-full bg-apple-accent text-white flex items-center justify-center shrink-0 shadow-apple-card">
                 <Bot className="w-4 h-4" />
               </div>
             )}
 
             <div
-              className={`max-w-xl p-4 rounded-3xl text-xs md:text-sm leading-relaxed space-y-2 ${
+              className={`max-w-xl p-4 rounded-apple-xl text-xs md:text-sm leading-relaxed space-y-2 ${
                 m.sender === 'user'
-                  ? 'bg-blue-600 text-white rounded-tr-none shadow-apple-sm'
-                  : 'glass-card bg-white/95 border border-black/10 rounded-tl-none shadow-apple-sm text-slate-900'
+                  ? 'bg-apple-accent text-white rounded-tr-none shadow-apple-card'
+                  : 'glass-card border border-apple-border-light dark:border-apple-border-dark rounded-tl-none shadow-apple-card text-apple-text-primary-light dark:text-apple-text-primary-dark'
               }`}
             >
               {m.metricsBadge && (
-                <div className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold">
+                <div className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[10px] font-bold">
                   {m.metricsBadge}
                 </div>
               )}
               <div className="whitespace-pre-line">{m.text}</div>
               <div
-                className={`text-[10px] ${m.sender === 'user' ? 'text-blue-100' : 'text-slate-400'}`}
+                className={`text-[10px] ${m.sender === 'user' ? 'text-white/70' : 'text-apple-text-tertiary'}`}
               >
                 {m.timestamp}
               </div>
             </div>
 
             {m.sender === 'user' && (
-              <div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 shadow-apple-sm">
+              <div className="w-8 h-8 rounded-full bg-apple-text-primary-light dark:bg-white text-white dark:text-black flex items-center justify-center shrink-0 shadow-apple-card">
                 <User className="w-4 h-4" />
               </div>
             )}
@@ -170,8 +170,8 @@ export const Assistant: React.FC = () => {
         ))}
 
         {isTyping && (
-          <div className="flex items-center gap-2 text-slate-400 text-xs italic pl-11">
-            <Bot className="w-3.5 h-3.5 animate-spin text-blue-600" />
+          <div className="flex items-center gap-2 text-apple-text-tertiary text-xs italic pl-11">
+            <Bot className="w-3.5 h-3.5 animate-spin text-apple-accent" />
             <span>Analyzing Chandigarh spatial layers...</span>
           </div>
         )}
@@ -185,7 +185,7 @@ export const Assistant: React.FC = () => {
           <button
             key={idx}
             onClick={() => handleSend(q)}
-            className="text-[11px] font-medium px-3 py-1.5 rounded-full bg-white border border-black/10 hover:border-blue-500 hover:text-blue-600 transition-all shadow-apple-subtle text-slate-700"
+            className="text-[11px] font-medium px-3.5 py-1.5 rounded-full glass-panel border border-apple-border-light dark:border-apple-border-dark hover:border-apple-accent hover:text-apple-accent transition-all shadow-apple-subtle text-apple-text-secondary-light dark:text-apple-text-secondary-dark"
           >
             {q}
           </button>
@@ -206,12 +206,12 @@ export const Assistant: React.FC = () => {
             placeholder="Ask about Chandigarh sectors, hospital beds, or candidate site rankings..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full pl-5 pr-14 py-3.5 rounded-full bg-white border border-black/15 text-xs md:text-sm font-sans focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-apple-sm"
+            className="w-full pl-5 pr-14 py-3.5 rounded-full bg-white dark:bg-[#161617] border border-apple-border-light dark:border-apple-border-dark text-xs md:text-sm text-apple-text-primary-light dark:text-apple-text-primary-dark placeholder:text-apple-text-tertiary font-sans focus:outline-none focus:ring-2 focus:ring-apple-accent shadow-apple-card"
           />
           <button
             type="submit"
             disabled={!input.trim() || isTyping}
-            className="absolute right-2 p-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white disabled:opacity-40 transition-all shadow-apple-sm"
+            className="absolute right-2 p-2.5 rounded-full bg-apple-accent hover:bg-apple-accent-hover text-white disabled:opacity-40 transition-all shadow-apple-card"
           >
             <Send className="w-4 h-4" />
           </button>

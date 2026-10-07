@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ["class"],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,34 +9,95 @@ export default {
     extend: {
       colors: {
         apple: {
-          bgLight: '#F5F5F7',
-          bgDark: '#0D0E12',
-          cardLight: 'rgba(255, 255, 255, 0.75)',
-          cardDark: 'rgba(28, 28, 30, 0.75)',
-          blue: '#007AFF',
-          indigo: '#5856D6',
-          purple: '#AF52DE',
-          pink: '#FF2D55',
-          emerald: '#34C759',
-          amber: '#FF9500',
-          red: '#FF3B30',
-          cyan: '#30B0C7',
-          grayLight: '#E5E5EA',
-          grayDark: '#2C2C2E',
-        }
+          bg: {
+            light: "#FBFBFD",
+            dark: "#000000",
+          },
+          surface: {
+            light: "#FFFFFF",
+            dark: "#161617",
+          },
+          surfaceElevated: {
+            light: "#FFFFFF",
+            dark: "#1D1D1F",
+          },
+          text: {
+            primary: {
+              light: "#1D1D1F",
+              dark: "#F5F5F7",
+            },
+            secondary: {
+              light: "#6E6E73",
+              dark: "#86868B",
+            },
+            tertiary: {
+              light: "#A1A1A6",
+              dark: "#6E6E73",
+            },
+          },
+          accent: {
+            DEFAULT: "#0071E3",
+            hover: "#0077ED",
+            light: "#E8F2FE",
+            dark: "#0A3D73",
+          },
+          border: {
+            light: "rgba(0, 0, 0, 0.08)",
+            dark: "rgba(255, 255, 255, 0.12)",
+          },
+          status: {
+            success: "#30D158",
+            warning: "#FF9F0A",
+            danger: "#FF453A",
+            successLight: "rgba(48, 209, 88, 0.12)",
+            warningLight: "rgba(255, 159, 10, 0.12)",
+            dangerLight: "rgba(255, 69, 58, 0.12)",
+          },
+        },
+      },
+      fontFamily: {
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "SF Pro Display",
+          "SF Pro Text",
+          "Inter",
+          "system-ui",
+          "sans-serif",
+        ],
+        mono: [
+          "SF Mono",
+          "ui-monospace",
+          "Menlo",
+          "Monaco",
+          "Cascadia Mono",
+          "monospace",
+        ],
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-        '4xl': '2rem',
+        "apple-sm": "12px",
+        "apple-md": "16px",
+        "apple-lg": "20px",
+        "apple-xl": "24px",
+        "apple-2xl": "28px",
       },
       boxShadow: {
-        'apple-sm': '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
-        'apple-md': '0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)',
-        'apple-lg': '0 20px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06)',
-        'apple-glow': '0 0 25px rgba(0, 122, 255, 0.25)',
+        "apple-subtle": "0 2px 8px rgba(0, 0, 0, 0.04)",
+        "apple-card": "0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02)",
+        "apple-card-hover": "0 12px 36px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04)",
+        "apple-elevated": "0 20px 48px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06)",
+        "apple-glow-blue": "0 0 30px rgba(0, 113, 227, 0.35)",
+        "apple-glow-red": "0 0 30px rgba(255, 69, 58, 0.35)",
+        "apple-glow-green": "0 0 30px rgba(48, 209, 88, 0.35)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-up": "fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "scale-in": "scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
   plugins: [],
-}
+};
