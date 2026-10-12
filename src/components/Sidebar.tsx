@@ -22,7 +22,7 @@ export const Sidebar: React.FC = () => {
     { path: '/simulation', label: 'Scenario Comparison', icon: GitCompare },
     { path: '/analytics', label: 'Demographics & Health', icon: BarChart3 },
     { path: '/reports', label: 'Executive Reports', icon: FileText },
-    { path: '/assistant', label: 'Spatial AI Copilot', icon: Bot },
+    { path: '/assistant', label: 'TwinMind Spatial AI', icon: Bot },
     { path: '/agents', label: 'Pipeline & ML Models', icon: Cpu },
   ];
 

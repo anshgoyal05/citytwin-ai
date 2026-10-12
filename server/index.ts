@@ -7,6 +7,7 @@ import candidateSitesRouter from './routes/candidateSites.js';
 import suitabilityRouter from './routes/suitability.js';
 import scenariosRouter from './routes/scenarios.js';
 import benchmarksRouter from './routes/benchmarks.js';
+import twinmindRouter from './routes/twinmind.js';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -58,6 +59,7 @@ app.use('/api/candidate-sites', candidateSitesRouter);
 app.use('/api/suitability', suitabilityRouter);
 app.use('/api/scenarios', scenariosRouter);
 app.use('/api/benchmarks', benchmarksRouter);
+app.use('/api/twinmind', twinmindRouter);
 
 // 404 Handler
 app.use((_req: Request, res: Response) => {

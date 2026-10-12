@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
     { path: '/simulation', label: 'Scenarios', icon: GitCompare },
     { path: '/analytics', label: 'Analytics', icon: BarChart3 },
     { path: '/reports', label: 'Reports', icon: FileText },
-    { path: '/assistant', label: 'Copilot', icon: Bot },
+    { path: '/assistant', label: 'TwinMind', icon: Bot },
     { path: '/agents', label: 'Agents', icon: Cpu },
   ];
 

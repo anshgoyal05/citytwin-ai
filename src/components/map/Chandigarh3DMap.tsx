@@ -1,10 +1,25 @@
 import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import { MapboxOverlay } from '@deck.gl/mapbox';
-import { GeoJsonLayer, ScatterplotLayer, ColumnLayer, TextLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, ColumnLayer, TextLayer, PolygonLayer, PathLayer } from '@deck.gl/layers';
 import { useCity } from '../../context/CityContext';
 import type { SectorData, CandidateSite, HospitalData } from '../../types';
 import sectorsGeoJson from '../../data/chandigarh_sectors_geojson';
+import {
+  CHANDIGARH_3D_BUILDINGS_DATA,
+  type BuildingProperties,
+} from '../../data/chandigarh_buildings_geojson';
+import {
+  getRoadNetworkGeoJSON,
+  ROAD_SEGMENTS,
+} from '../../data/chandigarh_road_network';
+import {
+  initVehicleFleet,
+  tickVehicleFleet,
+  generate3DVehiclePolygons,
+  type SimulatedVehicle,
+  type Vehicle3DPolygon,
+} from './VehicleSimulationEngine';
 import {
   ZoomIn,
   ZoomOut,
@@ -14,12 +29,18 @@ import {
   Sparkles,
   Layers,
   Building,
+  Building2,
   Key,
   Sun,
   Moon,
   Maximize2,
   Minimize2,
   Box,
+  Car,
+  Route,
+  RefreshCw,
+  Eye,
+  Info,
 } from 'lucide-react';
 import {
   WeatherAndTrafficSimulation,
@@ -184,7 +205,7 @@ interface TooltipInfo {
   x: number;
   y: number;
   object: any;
-  type: 'sector' | 'candidate' | 'hospital';
+  type: 'sector' | 'candidate' | 'hospital' | 'building' | 'road';
 }
 
 function checkWebGL2Support(): boolean {
@@ -217,9 +238,18 @@ export const Chandigarh3DMap: React.FC = () => {
   const [hasWebGL, setHasWebGL] = useState<boolean>(true);
   const [hoverInfo, setHoverInfo] = useState<TooltipInfo | null>(null);
 
-  // Basemap & 3D Building State
+  // Basemap & 3D Digital Twin State
   const [basemapStyle, setBasemapStyle] = useState<BasemapStyleId>('satellite-3d');
   const [enable3DBuildings, setEnable3DBuildings] = useState<boolean>(true);
+  const [selectedBuilding, setSelectedBuilding] = useState<BuildingProperties | null>(null);
+  const [showRoadNetwork, setShowRoadNetwork] = useState<boolean>(true);
+  const [isOrbiting, setIsOrbiting] = useState<boolean>(false);
+
+  // Vehicle Simulation State
+  const fleetRef = useRef<SimulatedVehicle[]>(initVehicleFleet(56));
+  const [vehiclePolygons, setVehiclePolygons] = useState<Vehicle3DPolygon[]>([]);
+  const roadNetworkGeoJson = useMemo(() => getRoadNetworkGeoJSON(), []);
+
   const [cartoKey, setCartoKey] = useState<string>(() => {
     return localStorage.getItem('carto_api_key') || import.meta.env.VITE_CARTO_API_KEY || '';
   });
@@ -317,7 +347,7 @@ export const Chandigarh3DMap: React.FC = () => {
           source: 'openmaptiles-buildings',
           'source-layer': 'building',
           type: 'fill-extrusion',
-          minzoom: 13,
+          minzoom: 11,
           paint: {
             'fill-extrusion-color': isDark
               ? [
@@ -344,25 +374,81 @@ export const Chandigarh3DMap: React.FC = () => {
               'interpolate',
               ['linear'],
               ['zoom'],
-              13, 0,
-              14.2, ['coalesce', ['get', 'render_height'], 14],
+              11, 0,
+              13.5, ['coalesce', ['get', 'render_height'], 14],
             ],
             'fill-extrusion-base': [
               'interpolate',
               ['linear'],
               ['zoom'],
-              13, 0,
-              14.2, ['coalesce', ['get', 'render_min_height'], 0],
+              11, 0,
+              13.5, ['coalesce', ['get', 'render_min_height'], 0],
             ],
             'fill-extrusion-opacity': 0.85,
           },
         },
         labelLayerId
       );
+
+      // Add directional sun lighting for realistic 3D facades and shadows
+      if (map.setLight) {
+        try {
+          map.setLight({
+            anchor: 'viewport',
+            color: isDark ? '#c5d8ff' : '#ffffff',
+            intensity: isDark ? 0.45 : 0.65,
+            position: [1.5, 90, 40],
+          });
+        } catch {}
+      }
     } catch (e) {
       // Source might not have loaded yet or not available in current style
     }
   }, [enable3DBuildings, isDark]);
+
+  // 60 FPS WebGL Vehicle Animation Loop
+  useEffect(() => {
+    if (!showTraffic) {
+      setVehiclePolygons([]);
+      return;
+    }
+
+    let lastTime = performance.now();
+    let animId: number;
+
+    const animateVehicles = (currentTime: number) => {
+      const dt = Math.min(0.08, (currentTime - lastTime) / 1000);
+      lastTime = currentTime;
+
+      tickVehicleFleet(fleetRef.current, dt);
+      const isNightOrRain = weather === 'night' || weather === 'rain';
+      const polys = generate3DVehiclePolygons(fleetRef.current, isNightOrRain, currentTime);
+      setVehiclePolygons(polys);
+
+      animId = requestAnimationFrame(animateVehicles);
+    };
+
+    animId = requestAnimationFrame(animateVehicles);
+    return () => cancelAnimationFrame(animId);
+  }, [showTraffic, weather]);
+
+  // Cinematic 360-degree Camera Orbit Mode
+  useEffect(() => {
+    if (!isOrbiting || !mapRef.current) return;
+    let animId: number;
+    const rotateSpeed = 0.12;
+
+    const orbit = () => {
+      if (mapRef.current && isOrbiting) {
+        const curBearing = mapRef.current.getBearing();
+        mapRef.current.setBearing(curBearing + rotateSpeed);
+        animId = requestAnimationFrame(orbit);
+      }
+    };
+
+    animId = requestAnimationFrame(orbit);
+    return () => cancelAnimationFrame(animId);
+  }, [isOrbiting]);
 
   // Sync camera when mapViewState updates externally
   useEffect(() => {
@@ -649,6 +735,158 @@ export const Chandigarh3DMap: React.FC = () => {
       );
     }
 
+    // -------------------------------------------------------------------------
+    // 6. CHANDIGARH 7Vs ROAD NETWORK LAYER (Boulevards, Arterials & Flow)
+    // -------------------------------------------------------------------------
+    if (showRoadNetwork) {
+      layerList.push(
+        new GeoJsonLayer({
+          id: 'chandigarh-road-network-surface',
+          data: roadNetworkGeoJson as any,
+          pickable: true,
+          stroked: true,
+          filled: false,
+          lineWidthMinPixels: 2.5,
+          getLineWidth: (f: any) =>
+            f.properties.lanes === 6 ? 9 : f.properties.lanes === 4 ? 6.5 : 4.5,
+          lineWidthUnits: 'meters',
+          getLineColor: (f: any) => {
+            return isDark ? [40, 52, 70, 240] : [80, 95, 115, 230];
+          },
+          onHover: (info: any) => {
+            if (info.object) {
+              setHoverInfo({
+                x: info.x,
+                y: info.y,
+                object: info.object.properties,
+                type: 'road',
+              });
+            } else if (hoverInfo?.type === 'road') {
+              setHoverInfo(null);
+            }
+          },
+        })
+      );
+
+      layerList.push(
+        new GeoJsonLayer({
+          id: 'chandigarh-road-flow-lanes',
+          data: roadNetworkGeoJson as any,
+          pickable: false,
+          stroked: true,
+          filled: false,
+          lineWidthMinPixels: 1,
+          getLineWidth: 1.2,
+          lineWidthUnits: 'meters',
+          getLineColor: (f: any) => {
+            if (f.properties.trafficFlow === 'congested') return [239, 68, 68, 200];
+            if (f.properties.trafficFlow === 'moderate') return [245, 158, 11, 200];
+            return [16, 185, 129, 200];
+          },
+        })
+      );
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. REALISTIC 3D BUILDINGS LAYER (Hospitals, Capitol, Plaza, Hubs)
+    // -------------------------------------------------------------------------
+    if (enable3DBuildings) {
+      layerList.push(
+        new PolygonLayer({
+          id: 'chandigarh-realistic-3d-buildings',
+          data: CHANDIGARH_3D_BUILDINGS_DATA,
+          pickable: true,
+          extruded: true,
+          wireframe: false,
+          getPolygon: (d: any) => d.coords,
+          getElevation: (d: any) => d.height_m,
+          getFillColor: (d: any) => {
+            if (selectedBuilding && selectedBuilding.id === d.id) {
+              return [0, 113, 227, 255]; // Apple Vibrant Blue Focus
+            }
+            if (d.category === 'candidate_proposal') {
+              return [16, 185, 129, 245]; // Proposed Medical Facility Emerald
+            }
+            const baseColor = isDark ? d.color_dark : d.color_light;
+            return [baseColor[0], baseColor[1], baseColor[2], 250];
+          },
+          getLineColor: (d: any) => {
+            if (selectedBuilding && selectedBuilding.id === d.id) {
+              return [255, 255, 255, 255];
+            }
+            return isDark ? [51, 65, 85, 200] : [148, 163, 184, 200];
+          },
+          lineWidthMinPixels: 1,
+          material: {
+            ambient: 0.45,
+            diffuse: 0.65,
+            shininess: 38,
+          },
+          updateTriggers: {
+            getFillColor: [selectedBuilding, isDark],
+            getLineColor: [selectedBuilding, isDark],
+          },
+          onHover: (info: any) => {
+            if (info.object) {
+              setHoverInfo({
+                x: info.x,
+                y: info.y,
+                object: info.object,
+                type: 'building',
+              });
+            } else if (hoverInfo?.type === 'building') {
+              setHoverInfo(null);
+            }
+          },
+          onClick: (info: any) => {
+            if (info.object) {
+              setSelectedBuilding(info.object);
+              const center = info.object.coords[0];
+              if (mapRef.current && center) {
+                mapRef.current.flyTo({
+                  center: [center[0], center[1]],
+                  zoom: 16.4,
+                  pitch: 62,
+                  bearing: -25,
+                  duration: 1200,
+                });
+              }
+            }
+          },
+        })
+      );
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. ANIMATED 3D MOVING VEHICLES LAYER (Left-Hand Driving WebGL Traffic)
+    // -------------------------------------------------------------------------
+    if (showTraffic && vehiclePolygons.length > 0) {
+      layerList.push(
+        new PolygonLayer({
+          id: 'chandigarh-3d-vehicles-layer',
+          data: vehiclePolygons,
+          pickable: false,
+          extruded: true,
+          wireframe: false,
+          getPolygon: (d: any) => d.polygon,
+          getBaseElevation: (d: any) => d.baseElevation,
+          getElevation: (d: any) => d.elevation,
+          getFillColor: (d: any) => d.color,
+          material: {
+            ambient: 0.55,
+            diffuse: 0.65,
+            shininess: 45,
+          },
+          updateTriggers: {
+            getPolygon: [vehiclePolygons],
+            getElevation: [vehiclePolygons],
+            getBaseElevation: [vehiclePolygons],
+            getFillColor: [vehiclePolygons],
+          },
+        })
+      );
+    }
+
     return layerList;
   }, [
     hasWebGL,
@@ -661,6 +899,13 @@ export const Chandigarh3DMap: React.FC = () => {
     isochroneFeatures,
     setSelectedCandidate,
     setSelectedSector,
+    showRoadNetwork,
+    roadNetworkGeoJson,
+    enable3DBuildings,
+    selectedBuilding,
+    showTraffic,
+    vehiclePolygons,
+    isDark,
   ]);
 
   // Mount MapLibre
@@ -994,6 +1239,32 @@ export const Chandigarh3DMap: React.FC = () => {
             <Box className="w-4 h-4" />
           </button>
 
+          {/* Toggle Road Network */}
+          <button
+            onClick={() => setShowRoadNetwork(!showRoadNetwork)}
+            title={showRoadNetwork ? 'Hide 7Vs Road Network' : 'Show 7Vs Road Network'}
+            className={`p-2 rounded-apple-sm transition-colors ${
+              showRoadNetwork
+                ? 'text-apple-accent bg-apple-accent/10'
+                : 'text-apple-text-secondary-light hover:bg-black/5 dark:hover:bg-white/10'
+            }`}
+          >
+            <Route className="w-4 h-4" />
+          </button>
+
+          {/* Cinematic 360 Orbit Button */}
+          <button
+            onClick={() => setIsOrbiting(!isOrbiting)}
+            title={isOrbiting ? 'Stop 360° Cinematic Orbit' : 'Start 360° Cinematic Orbit'}
+            className={`p-2 rounded-apple-sm transition-colors ${
+              isOrbiting
+                ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-500/15'
+                : 'text-apple-text-secondary-light hover:bg-black/5 dark:hover:bg-white/10'
+            }`}
+          >
+            <RefreshCw className={`w-4 h-4 ${isOrbiting ? 'animate-spin' : ''}`} />
+          </button>
+
           <button
             onClick={handleZoomIn}
             title="Zoom In"
@@ -1026,29 +1297,37 @@ export const Chandigarh3DMap: React.FC = () => {
       </div>
 
       {/* Map Legend Overlay (Bottom Left) */}
-      <div className="absolute bottom-4 left-4 z-20 glass-panel p-3 rounded-apple-md text-[11px] font-sans max-w-xs space-y-2 pointer-events-auto shadow-apple-card">
+      <div className="absolute bottom-4 left-4 z-20 glass-panel p-3 rounded-apple-md text-[11px] font-sans max-w-sm space-y-2 pointer-events-auto shadow-apple-card">
         <div className="font-semibold text-apple-text-primary-light dark:text-apple-text-primary-dark flex items-center justify-between">
-          <span>Spatial 3D Telemetry</span>
+          <span>3D Digital Twin City Telemetry</span>
           <span className="text-[10px] text-apple-accent font-bold bg-apple-accent/10 px-2 py-0.5 rounded-full">
-            REAL GIS (64 SECTORS)
+            REAL GIS MODEL
           </span>
         </div>
         <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-apple-text-secondary-light dark:text-apple-text-secondary-dark">
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-emerald-400/30" />
-            <span>#1 Top Candidate</span>
+            <span>#1 Top Candidate Site</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
-            <span>Candidates (#2-#6)</span>
+            <span>Candidate Sites (#2-#6)</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
             <span>Existing Hospitals</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded bg-blue-500/30 border border-blue-500" />
-            <span>3D Density Columns</span>
+            <span className="w-2.5 h-2.5 rounded bg-blue-500/40 border border-blue-500" />
+            <span>3D Buildings (100+ Real)</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-1.5 rounded-sm bg-slate-600 dark:bg-slate-300" />
+            <span>7Vs Road Network Grid</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-1.5 rounded-sm bg-emerald-500 animate-pulse" />
+            <span>3D Moving Traffic</span>
           </div>
         </div>
       </div>
@@ -1059,10 +1338,78 @@ export const Chandigarh3DMap: React.FC = () => {
           className="deck-tooltip"
           style={{
             position: 'fixed',
-            left: Math.min(window.innerWidth - 270, hoverInfo.x + 15),
+            left: Math.min(window.innerWidth - 300, hoverInfo.x + 15),
             top: Math.max(70, hoverInfo.y - 25),
           }}
         >
+          {hoverInfo.type === 'building' && (
+            <div className="space-y-1.5 max-w-sm">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-1.5 font-bold text-apple-text-primary-light dark:text-apple-text-primary-dark">
+                  <Building2 className="w-3.5 h-3.5 text-apple-accent shrink-0" />
+                  <span>{hoverInfo.object.name}</span>
+                </div>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-apple-accent/10 text-apple-accent uppercase whitespace-nowrap">
+                  {hoverInfo.object.category?.replace('_', ' ')}
+                </span>
+              </div>
+              <div className="text-[11px] text-apple-text-secondary-light dark:text-apple-text-secondary-dark flex items-center gap-2 flex-wrap">
+                <span className="font-semibold text-apple-text-primary-light dark:text-apple-text-primary-dark">
+                  {hoverInfo.object.sector}
+                </span>
+                <span>•</span>
+                <span className="font-semibold text-apple-accent">{hoverInfo.object.height_m}m Height</span>
+                <span>•</span>
+                <span>{hoverInfo.object.floors} Floors</span>
+                {hoverInfo.object.yearBuilt && (
+                  <>
+                    <span>•</span>
+                    <span>Built {hoverInfo.object.yearBuilt}</span>
+                  </>
+                )}
+              </div>
+              {hoverInfo.object.details && (
+                <div className="text-[10px] text-apple-text-tertiary border-t border-apple-border-light dark:border-apple-border-dark pt-1">
+                  {hoverInfo.object.details}
+                </div>
+              )}
+              <div className="text-[9px] text-apple-accent font-medium pt-0.5">
+                Click building to fly camera & orbit in 3D
+              </div>
+            </div>
+          )}
+
+          {hoverInfo.type === 'road' && (
+            <div className="space-y-1 max-w-xs">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-1.5 font-bold text-apple-text-primary-light dark:text-apple-text-primary-dark">
+                  <Route className="w-3.5 h-3.5 text-apple-accent" />
+                  <span>{hoverInfo.object.name}</span>
+                </div>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-500/10 text-slate-600 dark:text-slate-300">
+                  {hoverInfo.object.lanes} LANES
+                </span>
+              </div>
+              <div className="text-[11px] text-apple-text-secondary-light dark:text-apple-text-secondary-dark flex items-center gap-2">
+                <span className="capitalize">{hoverInfo.object.type?.replace('_', ' ')}</span>
+                <span>•</span>
+                <span>{hoverInfo.object.speedLimitKmH} km/h Limit</span>
+                <span>•</span>
+                <span
+                  className={
+                    hoverInfo.object.trafficFlow === 'congested'
+                      ? 'text-red-500 font-semibold'
+                      : hoverInfo.object.trafficFlow === 'moderate'
+                      ? 'text-amber-500 font-semibold'
+                      : 'text-emerald-500 font-semibold'
+                  }
+                >
+                  {hoverInfo.object.trafficFlow?.toUpperCase()} FLOW
+                </span>
+              </div>
+            </div>
+          )}
+
           {hoverInfo.type === 'candidate' && (
             <div className="space-y-1 max-w-xs">
               <div className="flex items-center justify-between gap-3">

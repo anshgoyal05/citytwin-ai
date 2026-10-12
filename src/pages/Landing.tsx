@@ -41,7 +41,7 @@ import {
   Radar,
 } from 'recharts';
 
-type HeroTab = '3d-twin' | 'mcda' | 'radar' | 'copilot';
+type HeroTab = '3d-twin' | 'mcda' | 'radar' | 'twinmind';
 type WeatherState = 'clear' | 'rain' | 'fog' | 'night';
 
 export const Landing: React.FC = () => {
@@ -224,7 +224,7 @@ export const Landing: React.FC = () => {
     { name: '3D Spatial Twin', path: '/dashboard', icon: Layers, tag: 'Interactive 3D GIS', desc: 'WebGL 60FPS 3D buildings, dynamic rain/fog particle shaders, and live traffic.' },
     { name: 'Scenario Sandbox', path: '/simulation', icon: GitCompare, tag: 'Trade-off Engine', desc: 'Dynamic AHP weight configuration, side-by-side site trade-offs, and sensitivity curves.' },
     { name: 'Demographics & Health', path: '/analytics', icon: BarChart3, tag: '64 Sectors Mapped', desc: 'Sector-by-sector population density, hospital bed ratios, and healthcare gaps.' },
-    { name: 'Spatial AI Copilot', path: '/assistant', icon: Bot, tag: 'Decision Support', desc: 'Cites official master plans, municipal registries, and golden-hour catchment data.' },
+    { name: 'TwinMind AI', path: '/assistant', icon: Bot, tag: 'Decision Intelligence', desc: 'Gemini-powered spatial intelligence citing official master plans, municipal registries, and golden-hour catchment data.' },
     { name: 'Executive Reports', path: '/reports', icon: FileText, tag: 'Dossier PDF', desc: 'One-click executive briefing PDFs with statutory checklists and radar charts.' },
     { name: 'Data & ML Pipeline', path: '/agents', icon: Cpu, tag: 'PostGIS / MCDA', desc: 'Inspect spatial processing pipeline, GeoJSON telemetry, and AHP scoring models.' },
   ];
@@ -328,7 +328,7 @@ export const Landing: React.FC = () => {
                 { id: '3d-twin', label: '3D Spatial Twin', icon: Layers },
                 { id: 'mcda', label: 'Live MCDA Simulator', icon: Sliders },
                 { id: 'radar', label: 'Sector 360° Radar', icon: BarChart3 },
-                { id: 'copilot', label: 'Spatial AI Copilot', icon: Bot },
+                { id: 'twinmind', label: 'TwinMind AI', icon: Bot },
               ].map((tab) => {
                 const Icon = tab.icon;
                 const active = activeHeroTab === tab.id;
@@ -814,11 +814,11 @@ export const Landing: React.FC = () => {
               )}
 
               {/* -----------------------------------------------------------
-                  TAB 4: SPATIAL AI COPILOT DIALOGUE SIMULATOR
+                  TAB 4: TWINMIND AI DIALOGUE SIMULATOR
               ----------------------------------------------------------- */}
-              {activeHeroTab === 'copilot' && (
+              {activeHeroTab === 'twinmind' && (
                 <motion.div
-                  key="tab-copilot"
+                  key="tab-twinmind"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
@@ -830,7 +830,7 @@ export const Landing: React.FC = () => {
                       Interactive Query Simulator
                     </span>
                     <h3 className="text-xl font-bold text-apple-text-primary-light dark:text-apple-text-primary-dark">
-                      Click a municipal query to simulate AI Copilot reasoning
+                      Click a municipal query to simulate TwinMind reasoning
                     </h3>
                   </div>
 
@@ -897,7 +897,7 @@ export const Landing: React.FC = () => {
                         to="/assistant"
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-apple-accent hover:underline"
                       >
-                        <span>Launch Full Autonomous Copilot Conversation</span>
+                        <span>Launch Full TwinMind Intelligence Conversation</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>

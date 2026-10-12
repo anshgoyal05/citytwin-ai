@@ -340,9 +340,9 @@ export const WeatherAndTrafficSimulation: React.FC<WeatherAndTrafficSimulationPr
       }
 
       // -------------------------------------------------------------
-      // 2. LIVE VEHICLE / CARS SIMULATION
+      // 2. LIVE VEHICLE / CARS SIMULATION (2D Fallback only if no WebGL map)
       // -------------------------------------------------------------
-      if (showTraffic) {
+      if (showTraffic && !map) {
         const vehicles = vehiclesRef.current;
         vehicles.forEach((v) => {
           const corridor = CHANDIGARH_CORRIDORS[v.corridorIdx];

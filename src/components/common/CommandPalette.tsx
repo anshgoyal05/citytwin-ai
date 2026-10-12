@@ -70,8 +70,8 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       action: () => { onClose(); navigate('/reports'); },
     },
     {
-      title: 'Spatial AI Copilot',
-      subtitle: 'Conversational multi-criteria decision assistant grounded in GIS',
+      title: 'TwinMind Spatial Advisor',
+      subtitle: 'Conversational Gemini-powered spatial decision intelligence',
       icon: <Bot className="w-4 h-4 text-emerald-500" />,
       action: () => { onClose(); navigate('/assistant'); },
     },
